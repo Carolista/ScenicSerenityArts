@@ -49,5 +49,5 @@ export function initHeader() {
   }
   
   const header = createHeader();
-  document.body.insertBefore(header, document.body.firstChild);
+  document.body.prepend(header);
 }
