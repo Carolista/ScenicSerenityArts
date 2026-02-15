@@ -1,0 +1,30 @@
+:root {
+  /* Colors */
+  --color-background: #ffffff;
+  --color-text: #333333;
+  --color-primary: #4a90a4;
+  --color-secondary: #7eb09b;
+  --color-accent: #e8c468;
+  
+  /* Spacing */
+  --spacing-xs: 0.5rem;
+  --spacing-sm: 1rem;
+  --spacing-md: 1.5rem;
+  --spacing-lg: 2rem;
+  --spacing-xl: 3rem;
+  
+  /* Typography */
+  --font-family-primary: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+  --font-size-base: 16px;
+  --font-size-sm: 0.875rem;
+  --font-size-md: 1rem;
+  --font-size-lg: 1.25rem;
+  --font-size-xl: 1.5rem;
+  
+  /* Layout */
+  --max-width: 1200px;
+  --header-height: 80px;
+  
+  /* Border */
+  --border-radius: 4px;
+}
