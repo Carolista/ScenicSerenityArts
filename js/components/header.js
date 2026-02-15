@@ -43,6 +43,11 @@ export function createHeader() {
  * Adds the header to the body as the first element
  */
 export function initHeader() {
+  // Prevent duplicate headers
+  if (document.querySelector('header')) {
+    return;
+  }
+  
   const header = createHeader();
   document.body.insertBefore(header, document.body.firstChild);
 }
