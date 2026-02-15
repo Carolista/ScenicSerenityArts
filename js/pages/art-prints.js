@@ -30,7 +30,7 @@ export function initArtPrintsPage() {
 
 // Initialize page when DOM is ready
 if (document.readyState === 'loading') {
-  document.addEventListener('DOMContentLoaded', initArtPrintsPage);
+  document.addEventListener('DOMContentLoaded', initArtPrintsPage, { once: true });
 } else {
   initArtPrintsPage();
 }

@@ -30,7 +30,7 @@ export function initMerchandisePage() {
 
 // Initialize page when DOM is ready
 if (document.readyState === 'loading') {
-  document.addEventListener('DOMContentLoaded', initMerchandisePage);
+  document.addEventListener('DOMContentLoaded', initMerchandisePage, { once: true });
 } else {
   initMerchandisePage();
 }

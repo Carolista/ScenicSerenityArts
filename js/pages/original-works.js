@@ -30,7 +30,7 @@ export function initOriginalWorksPage() {
 
 // Initialize page when DOM is ready
 if (document.readyState === 'loading') {
-  document.addEventListener('DOMContentLoaded', initOriginalWorksPage);
+  document.addEventListener('DOMContentLoaded', initOriginalWorksPage, { once: true });
 } else {
   initOriginalWorksPage();
 }
