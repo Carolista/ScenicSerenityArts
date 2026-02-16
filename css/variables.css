@@ -49,7 +49,7 @@
 	/* Card */
 	--card-text-padding: var(--spacing-sm);
 	--card-title-size: var(--font-size-lg);
-	--card-subtitle-size: var(--font-size-sm);
+	--card-subtitle-size: var(--font-size-md);
 	--card-image-border-radius: var(--border-radius);
 	--card-border-width: 1px;
 	--card-shadow-hover: 4px 4px 8px rgba(0, 0, 0, 0.15);

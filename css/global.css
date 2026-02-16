@@ -111,6 +111,7 @@ p {
 	font-family: var(--font-family-scenic);
 	font-size: var(--card-title-size);
 	color: var(--color-primary);
+    text-transform: uppercase;
 	margin: 0;
 	line-height: 1.3;
 }
