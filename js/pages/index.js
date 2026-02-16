@@ -4,6 +4,7 @@
  */
 
 import { initHeader } from '../components/header.js';
+import { createCard } from '../components/card.js';
 
 export function initHomePage() {
 	// Initialize header
@@ -26,6 +27,42 @@ export function initHomePage() {
 	main.appendChild(heading);
 	main.appendChild(paragraph1);
 	main.appendChild(paragraph2);
+
+	// Create card grid
+	const cardGrid = document.createElement('div');
+	cardGrid.className = 'card-grid';
+
+	// Define card data
+	const cardData = [
+		{
+			imageSrc: 'assets/images/embrace-warmth-square.jpg',
+			imageAlt: 'Card 1 image',
+			title: 'Title 1',
+			subtitle: 'Subtitle 1',
+		},
+		{
+			imageSrc: 'assets/images/escape-into-art-square.png',
+			imageAlt: 'Card 2 image',
+			title: 'Title 2',
+			subtitle: 'Subtitle 2',
+		},
+		{
+			imageSrc: 'assets/images/watercolor-magic.jpg',
+			imageAlt: 'Card 3 image',
+			title: 'Title 3',
+			subtitle: 'Subtitle 3',
+		},
+	];
+
+	// Create cards
+	cardData.forEach(data => {
+		const card = createCard(data);
+		if (card) {
+			cardGrid.appendChild(card);
+		}
+	});
+
+	main.appendChild(cardGrid);
 
 	document.body.appendChild(main);
 }
