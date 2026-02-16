@@ -62,6 +62,7 @@ main {
 }
 
 h1 {
+    font-family: var(--font-family-scenic);
   font-size: var(--font-size-xl);
   margin-bottom: var(--spacing-md);
   color: var(--color-primary);
