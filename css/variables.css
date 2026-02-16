@@ -13,30 +13,34 @@
 	--color-primary: var(--color-primary-medium);
 	--color-secondary: var(--color-primary-light);
 
-	/* Spacing */
-	--spacing-xs: 0.5rem;
-	--spacing-sm: 1rem;
-	--spacing-md: 1.5rem;
-	--spacing-lg: 2rem;
-	--spacing-xl: 3rem;
+	/* Spacing - Fluid responsive values */
+	--spacing-xs: clamp(0.25rem, 1vw, 0.5rem);
+	--spacing-sm: clamp(0.5rem, 2vw, 1rem);
+	--spacing-md: clamp(1rem, 3vw, 1.5rem);
+	--spacing-lg: clamp(1.5rem, 4vw, 2rem);
+	--spacing-xl: clamp(2rem, 5vw, 3rem);
 
-	/* Typography */
+	/* Typography - Fluid responsive values */
 	--font-family-primary: 'Quicksand', Roboto, sans-serif;
 	--font-family-serenity: 'Hurricane', cursive;
 	--font-family-scenic: 'Tenor Sans', sans-serif;
 	--font-size-base: 16px;
-	--font-size-sm: 0.875rem;
-	--font-size-md: 1rem;
-	--font-size-lg: 1.25rem;
-	--font-size-xl: 1.5rem;
+	--font-size-sm: clamp(0.75rem, 1.5vw, 0.875rem);
+	--font-size-md: clamp(0.875rem, 2vw, 1rem);
+	--font-size-lg: clamp(1rem, 2.5vw, 1.25rem);
+	--font-size-xl: clamp(1.25rem, 3vw, 1.5rem);
 
 	/* Layout */
 	--max-width: 1200px;
-	--logo-height: 72px;
+	--logo-height: clamp(48px, 10vw, 72px);
 	--header-padding-vertical: var(--spacing-sm);
 	--header-height: calc(
 		var(--logo-height) + (var(--header-padding-vertical) * 2)
 	);
+
+	/* Breakpoints */
+	--breakpoint-mobile: 768px;
+	--breakpoint-tablet: 1024px;
 
 	/* Border */
 	--border-radius: 4px;
