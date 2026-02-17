@@ -62,7 +62,7 @@ export function createHeader() {
 	logoLink.className = 'logo-link';
 
 	const logoImg = document.createElement('img');
-	logoImg.src = 'assets/images/SSA-logo-white.png';
+	logoImg.src = 'assets/images/logos/SSA-logo-white.png';
 	logoImg.alt = 'Scenic Serenity Arts';
 
 	logoLink.appendChild(logoImg);

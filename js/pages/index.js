@@ -36,7 +36,7 @@ export function initHomePage() {
 	// Define card data
 	const cardData = [
 		{
-			imageSrc: 'assets/images/SSA-logo-blue.png',
+			imageSrc: 'assets/images/logos/SSA-logo-blue.png',
 			imageAlt:
 				'A collection of original watercolor paintings and handmade geometric knitwear',
 			title: 'Original Works',
@@ -45,7 +45,7 @@ export function initHomePage() {
 			linkURL: '../original-works.html',
 		},
 		{
-			imageSrc: 'assets/images/SSA-logo-blue.png',
+			imageSrc: 'assets/images/logos/SSA-logo-blue.png',
 			imageAlt:
 				'Fine art posters and greeting cards featuring stylized mountain and coastal landscapes',
 			title: 'Art Prints & Stationery',
@@ -54,7 +54,7 @@ export function initHomePage() {
 			linkURL: '../art-prints.html',
 		},
 		{
-			imageSrc: 'assets/images/SSA-logo-blue.png',
+			imageSrc: 'assets/images/logos/SSA-logo-blue.png',
 			imageAlt:
 				'Modern lifestyle accessories including MagSafe cases and home decor with abstract art',
 			title: 'Merchandise',

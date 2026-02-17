@@ -35,21 +35,21 @@ export function initMerchandisePage() {
 			'Durable protection for your phone featuring signature watercolor and organic patterns.',
 		cards: [
 			{
-				imageSrc: 'assets/images/SSA-logo-blue.png',
+				imageSrc: 'assets/images/logos/SSA-logo-blue.png',
 				imageAlt: 'MagSafe Phone Cases',
 				title: 'MagSafe Phone Cases',
 				subtitle:
 					'Precision-engineered cases with built-in magnets, blending modern tech with organic art.',
 			},
 			{
-				imageSrc: 'assets/images/SSA-logo-blue.png',
+				imageSrc: 'assets/images/logos/SSA-logo-blue.png',
 				imageAlt: 'Snap Phone Cases',
 				title: 'Snap Phone Cases',
 				subtitle:
 					'Sleek, slim-profile protection for a minimalist look that highlights original artwork.',
 			},
 			{
-				imageSrc: 'assets/images/SSA-logo-blue.png',
+				imageSrc: 'assets/images/logos/SSA-logo-blue.png',
 				imageAlt: 'Tough Phone Cases',
 				title: 'Tough Phone Cases',
 				subtitle:
@@ -65,14 +65,14 @@ export function initMerchandisePage() {
 			'Functional designs that turn everyday objects into artistic statements.',
 		cards: [
 			{
-				imageSrc: 'assets/images/SSA-logo-blue.png',
+				imageSrc: 'assets/images/logos/SSA-logo-blue.png',
 				imageAlt: 'Apple Watch Bands',
 				title: 'Apple Watch Bands',
 				subtitle:
 					'High-quality vegan leather bands that turn your wearable tech into a piece of watercolor art.',
 			},
 			{
-				imageSrc: 'assets/images/SSA-logo-blue.png',
+				imageSrc: 'assets/images/logos/SSA-logo-blue.png',
 				imageAlt: 'Clocks',
 				title: 'Clocks',
 				subtitle:
