@@ -41,15 +41,11 @@ export function initAboutPage() {
 	});
 
 	const code = document.createElement('section');
-	code.innerHTML = `
-  <pre><code>
-    <span class="keyword">while</span> (world.isSpinning()) {
-    &nbsp;&nbsp;me.codeByDay();
-    &nbsp;&nbsp;me.paintByNight();
-    &nbsp;&nbsp;me.createSerenity();
-    }
-  </code></pre>
-  `;
+	code.innerHTML = `<pre><code><span class="keyword">while</span> (world.isSpinning()) {
+  me.codeByDay();
+  me.paintByNight();
+  me.createSerenity();
+}</code></pre>`;
 	main.appendChild(code);
 
 	document.body.appendChild(main);

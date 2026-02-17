@@ -118,6 +118,22 @@ p {
 	font-weight: bold;
 }
 
+.about-page section {
+	background-color: rgba(221, 161, 94, 0.35);
+	border-radius: var(--border-radius);
+	padding: var(--spacing-sm);
+	max-width: max-content;
+	margin: var(--spacing-lg) auto;
+}
+
+.about-page section pre {
+	margin: 10px;
+}
+
+.about-page section code {
+	color: var(--color-accent-medium);
+}
+
 /* Product Section Component */
 .product-section {
 	margin-bottom: var(--spacing-xl);
