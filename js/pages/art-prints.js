@@ -5,6 +5,7 @@
 
 import { setupHead } from '../utils/head.js';
 import { initHeader } from '../components/header.js';
+import { initFooter } from '../components/footer.js';
 import { createSection } from '../components/section.js';
 
 export function initArtPrintsPage() {
@@ -37,7 +38,8 @@ export function initArtPrintsPage() {
 				imageSrc: 'assets/images/SSA-logo-blue.png',
 				imageAlt: 'Cards',
 				title: 'Cards',
-				subtitle: 'Artistic greeting cards for every occasion, featuring original art inspired by the beauty of the natural world.',
+				subtitle:
+					'Artistic greeting cards for every occasion, featuring original art inspired by the beauty of the natural world.',
 				linkURL:
 					'https://www.etsy.com/shop/ScenicSerenityArts?ref=dashboard-header&section_id=52438522',
 			},
@@ -45,7 +47,8 @@ export function initArtPrintsPage() {
 				imageSrc: 'assets/images/SSA-logo-blue.png',
 				imageAlt: 'Postcards',
 				title: 'Postcards',
-				subtitle: 'Small-scale prints based on original art. (Note: Currently exclusive to UK shipping.)',
+				subtitle:
+					'Small-scale prints based on original art. (Note: Currently exclusive to UK shipping.)',
 				linkURL:
 					'https://www.etsy.com/shop/ScenicSerenityArts?ref=dashboard-header&section_id=52399089',
 			},
@@ -60,7 +63,8 @@ export function initArtPrintsPage() {
 				imageSrc: 'assets/images/SSA-logo-blue.png',
 				imageAlt: 'Posters',
 				title: 'Posters',
-				subtitle: 'Archival-quality gallery reproductions of my most popular watercolor landscapes.',
+				subtitle:
+					'Archival-quality gallery reproductions of my most popular watercolor landscapes.',
 				linkURL:
 					'https://www.etsy.com/shop/ScenicSerenityArts?ref=dashboard-header&section_id=52461235',
 			},
@@ -77,7 +81,8 @@ export function initArtPrintsPage() {
 				imageSrc: 'assets/images/SSA-logo-blue.png',
 				imageAlt: 'Notebooks',
 				title: 'Notebooks',
-				subtitle: 'Hardcover spiral notebooks featuring original art—perfect for your daily logs and ruminations.',
+				subtitle:
+					'Hardcover spiral notebooks featuring original art—perfect for your daily logs and ruminations.',
 				linkURL:
 					'https://www.etsy.com/shop/ScenicSerenityArts?ref=dashboard-header&section_id=52384830',
 			},
@@ -95,6 +100,9 @@ export function initArtPrintsPage() {
 	main.appendChild(writingSection);
 
 	document.body.appendChild(main);
+
+	// Initialize footer
+	initFooter();
 }
 
 // Initialize page when DOM is ready

@@ -5,6 +5,7 @@
 
 import { setupHead } from '../utils/head.js';
 import { initHeader } from '../components/header.js';
+import { initFooter } from '../components/footer.js';
 
 export function initAboutPage() {
 	// Setup head elements
@@ -49,6 +50,9 @@ export function initAboutPage() {
 	main.appendChild(code);
 
 	document.body.appendChild(main);
+
+	// Initialize footer
+	initFooter();
 }
 
 // Initialize page when DOM is ready
