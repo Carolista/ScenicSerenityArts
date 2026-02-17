@@ -51,7 +51,7 @@
 	/* Card */
 	--card-text-padding: var(--spacing-sm);
 	--card-title-size: var(--font-size-lg);
-	--card-subtitle-size: var(--font-size-md);
+	--card-subtitle-size: clamp(0.875rem, 4vw, 1rem);
 	--card-image-border-radius: var(--border-radius);
 	--card-border-width: 1px;
 	--card-shadow-hover: 4px 4px 8px rgba(0, 0, 0, 0.15);

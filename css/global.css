@@ -16,8 +16,8 @@ body {
 /* Header Styles */
 header {
 	display: flex;
-	justify-content: space-between;
-	align-items: flex-start;
+	justify-content: flex-end;
+	align-items: flex-end;
 	padding: var(--spacing-sm) var(--spacing-lg);
 	height: var(--header-height);
 	background-color: var(--color-primary-medium);
@@ -29,9 +29,10 @@ header {
 	height: var(--logo-height);
 	display: flex;
 	align-items: center;
-	position: relative;
+	position: absolute;
+	top: var(--spacing-sm);
+	left: var(--spacing-lg);
 	z-index: 100;
-	margin-top: 0;
 	transition: filter 0.3s ease;
 }
 
@@ -61,10 +62,6 @@ header {
 	width: auto;
 	position: relative;
 	z-index: 1;
-}
-
-nav {
-	align-self: flex-end;
 }
 
 nav ul {
