@@ -98,7 +98,7 @@ h1 {
 
 h1#ssa-large {
 	font-family: var(--font-family-serenity);
-	font-size: 5rem;
+	font-size: calc(3 * var(--font-size-xl));
 	letter-spacing: -0.3rem;
 	color: var(--color-primary-light);
 }
@@ -194,6 +194,20 @@ p {
 	color: var(--color-text);
 	margin: var(--spacing-xs) 0 0 0;
 	line-height: 1.4;
+}
+
+/* Card link styling */
+a:has(.card) {
+	text-decoration: none;
+	color: inherit;
+}
+
+a .card-title {
+	color: var(--color-primary);
+}
+
+a .card-subtitle {
+	color: var(--color-text);
 }
 
 /* Card Grid/Container */
@@ -293,13 +307,15 @@ p {
 		display: block;
 	}
 
-	/* Single column for cards */
-	.card-grid {
-		grid-template-columns: 1fr;
-	}
-
 	/* Adjust header alignment */
 	header {
 		align-items: center;
+	}
+}
+
+@media (max-width: 576px) {
+    /* Single column for cards */
+	.card-grid {
+		grid-template-columns: 1fr;
 	}
 }
