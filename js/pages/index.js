@@ -3,10 +3,14 @@
  * Handles the content and functionality for the home/index page
  */
 
+import { setupHead } from '../utils/head.js';
 import { initHeader } from '../components/header.js';
 import { createCard } from '../components/card.js';
 
 export function initHomePage() {
+	// Setup head elements
+	setupHead({ title: 'Scenic Serenity Arts', includeAnalytics: true });
+
 	// Initialize header
 	initHeader();
 
@@ -15,7 +19,7 @@ export function initHomePage() {
 
 	const heading = document.createElement('h1');
 	heading.textContent = 'Welcome!';
-    heading.id = 'welcome'
+	heading.id = 'welcome';
 
 	const paragraph1 = document.createElement('p');
 	paragraph1.textContent =

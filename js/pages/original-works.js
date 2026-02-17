@@ -3,10 +3,14 @@
  * Handles the content and functionality for the Original Works page
  */
 
+import { setupHead } from '../utils/head.js';
 import { initHeader } from '../components/header.js';
 import { createCard } from '../components/card.js';
 
 export function initOriginalWorksPage() {
+	// Setup head elements
+	setupHead({ title: 'Original Works - Scenic Serenity Arts' });
+
 	// Initialize header
 	initHeader();
 

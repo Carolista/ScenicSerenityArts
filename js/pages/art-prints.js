@@ -3,74 +3,78 @@
  * Handles the content and functionality for the Art Prints page
  */
 
+import { setupHead } from '../utils/head.js';
 import { initHeader } from '../components/header.js';
 import { createCard } from '../components/card.js';
 
 export function initArtPrintsPage() {
-    // Initialize header
-    initHeader();
+	// Setup head elements
+	setupHead({ title: 'Art Prints - Scenic Serenity Arts' });
 
-    // Create main content
-    const main = document.createElement('main');
+	// Initialize header
+	initHeader();
 
-    const heading = document.createElement('h1');
-    heading.textContent = 'Art Prints & Stationery';
+	// Create main content
+	const main = document.createElement('main');
 
-    const paragraph1 = document.createElement('p');
-    paragraph1.textContent = 'Browse our selection of high-quality art prints.';
+	const heading = document.createElement('h1');
+	heading.textContent = 'Art Prints & Stationery';
 
-    const paragraph2 = document.createElement('p');
-    paragraph2.textContent =
-        'Bring the beauty of scenic landscapes to your home with our professionally printed reproductions.';
+	const paragraph1 = document.createElement('p');
+	paragraph1.textContent = 'Browse our selection of high-quality art prints.';
 
-    main.appendChild(heading);
-    main.appendChild(paragraph1);
-    main.appendChild(paragraph2);
+	const paragraph2 = document.createElement('p');
+	paragraph2.textContent =
+		'Bring the beauty of scenic landscapes to your home with our professionally printed reproductions.';
 
-    // Create card grid
-    const cardGrid = document.createElement('div');
-    cardGrid.className = 'card-grid';
+	main.appendChild(heading);
+	main.appendChild(paragraph1);
+	main.appendChild(paragraph2);
 
-    // Define card data
-    const cardData = [
-        {
-            imageSrc: 'assets/images/SSA-logo-blue.png',
-            imageAlt: 'Posters',
-            title: 'Posters',
-            subtitle: '(Subtitle)',
-        },
-        {
-            imageSrc: 'assets/images/SSA-logo-blue.png',
-            imageAlt: 'Cards',
-            title: 'Cards',
-            subtitle: '(Subtitle)',
-        },
-        {
-            imageSrc: 'assets/images/SSA-logo-blue.png',
-            imageAlt: 'Postcards',
-            title: 'Postcards',
-            subtitle: '(Subtitle)',
-        },
-    ];
+	// Create card grid
+	const cardGrid = document.createElement('div');
+	cardGrid.className = 'card-grid';
 
-    // Create cards
-    cardData.forEach((data) => {
-        const card = createCard(data);
-        if (card) {
-            cardGrid.appendChild(card);
-        }
-    });
+	// Define card data
+	const cardData = [
+		{
+			imageSrc: 'assets/images/SSA-logo-blue.png',
+			imageAlt: 'Posters',
+			title: 'Posters',
+			subtitle: '(Subtitle)',
+		},
+		{
+			imageSrc: 'assets/images/SSA-logo-blue.png',
+			imageAlt: 'Cards',
+			title: 'Cards',
+			subtitle: '(Subtitle)',
+		},
+		{
+			imageSrc: 'assets/images/SSA-logo-blue.png',
+			imageAlt: 'Postcards',
+			title: 'Postcards',
+			subtitle: '(Subtitle)',
+		},
+	];
 
-    main.appendChild(cardGrid);
+	// Create cards
+	cardData.forEach(data => {
+		const card = createCard(data);
+		if (card) {
+			cardGrid.appendChild(card);
+		}
+	});
 
-    document.body.appendChild(main);
+	main.appendChild(cardGrid);
+
+	document.body.appendChild(main);
 }
 
 // Initialize page when DOM is ready
 if (document.readyState === 'loading') {
-    document.addEventListener('DOMContentLoaded', initArtPrintsPage, {
-        once: true,
-    });
+	document.addEventListener('DOMContentLoaded', initArtPrintsPage, {
+		once: true,
+	});
 } else {
-    initArtPrintsPage();
+	initArtPrintsPage();
 }

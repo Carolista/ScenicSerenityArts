@@ -3,9 +3,13 @@
  * Handles the content and functionality for the About page
  */
 
+import { setupHead } from '../utils/head.js';
 import { initHeader } from '../components/header.js';
 
 export function initAboutPage() {
+	// Setup head elements
+	setupHead({ title: 'About - Scenic Serenity Arts' });
+
 	// Initialize header
 	initHeader();
 

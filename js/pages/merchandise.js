@@ -3,10 +3,14 @@
  * Handles the content and functionality for the Merchandise page
  */
 
+import { setupHead } from '../utils/head.js';
 import { initHeader } from '../components/header.js';
 import { createCard } from '../components/card.js';
 
 export function initMerchandisePage() {
+	// Setup head elements
+	setupHead({ title: 'Merchandise - Scenic Serenity Arts' });
+
 	// Initialize header
 	initHeader();
 
