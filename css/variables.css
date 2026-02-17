@@ -22,13 +22,14 @@
 
 	/* Typography - Fluid responsive values */
 	--font-family-primary: 'Quicksand', Roboto, sans-serif;
-	--font-family-serenity: 'Hurricane', cursive;
+	--font-family-serenity: 'Marck Script', cursive;
 	--font-family-scenic: 'Tenor Sans', sans-serif;
 	--font-size-base: 16px;
 	--font-size-sm: clamp(0.75rem, 1.5vw, 0.875rem);
 	--font-size-md: clamp(0.875rem, 2vw, 1rem);
 	--font-size-lg: clamp(1rem, 2.5vw, 1.25rem);
 	--font-size-xl: clamp(1.25rem, 3vw, 1.5rem);
+	--font-size-xxl: clamp(1.5rem, 3.5vw, 1.75rem);
 
 	/* Layout */
 	--max-width: 1200px;

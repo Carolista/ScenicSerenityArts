@@ -20,17 +20,12 @@ export function initOriginalWorksPage() {
 	const heading = document.createElement('h1');
 	heading.textContent = 'Original Works';
 
-	const paragraph1 = document.createElement('p');
-	paragraph1.textContent =
-		'Explore our collection of one-of-a-kind original artworks.';
-
-	const paragraph2 = document.createElement('p');
-	paragraph2.textContent =
-		'Each piece is carefully crafted to bring the serenity of scenic landscapes into your space.';
+	const paragraph = document.createElement('p');
+	paragraph.textContent =
+		'One-of-a-kind creations born from the intersection of logic and flow. From watercolor fractals to hand-knitted geometry, these pieces are crafted to be as unique as the nature that inspired them.';
 
 	main.appendChild(heading);
-	main.appendChild(paragraph1);
-	main.appendChild(paragraph2);
+	main.appendChild(paragraph);
 
 	// Create card grid
 	const cardGrid = document.createElement('div');
@@ -40,9 +35,9 @@ export function initOriginalWorksPage() {
 	const cardData = [
 		{
 			imageSrc: 'assets/images/SSA-logo-blue.png',
-			imageAlt: 'Shadow Box Paintings',
-			title: 'Shadow Box Paintings',
-			subtitle: '(Subtitle)',
+			imageAlt: 'Hand-painted 3D shadow box showing a layered mountain sunset.',
+			title: '3D Shadow Box Paintings',
+			subtitle: 'Multi-dimensional landscapes blending watercolor depth with intricate paper-crafted layers.',
 		},
 		{
 			imageSrc: 'assets/images/SSA-logo-blue.png',

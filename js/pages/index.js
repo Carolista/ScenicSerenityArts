@@ -18,20 +18,15 @@ export function initHomePage() {
 	const main = document.createElement('main');
 
 	const heading = document.createElement('h1');
-	heading.textContent = 'Welcome!';
-	heading.id = 'welcome';
+	heading.textContent = 'Scenic Serenity Arts';
+	heading.id = 'ssa-large';
 
-	const paragraph1 = document.createElement('p');
-	paragraph1.textContent =
-		'Welcome to Scenic Serenity Arts, where art meets nature.';
-
-	const paragraph2 = document.createElement('p');
-	paragraph2.textContent =
-		'Explore our collection of original works, art prints, and unique merchandise inspired by serene landscapes.';
+	const paragraph = document.createElement('p');
+	paragraph.textContent =
+		'Where the wilderness meets the mathematical. Explore a collection of intuitive art, fiber goods, and functional decor inspired by the organic rhythms of the Great Smoky Mountains and the Atlantic coast.';
 
 	main.appendChild(heading);
-	main.appendChild(paragraph1);
-	main.appendChild(paragraph2);
+	main.appendChild(paragraph);
 
 	// Create card grid
 	const cardGrid = document.createElement('div');
@@ -40,22 +35,22 @@ export function initHomePage() {
 	// Define card data
 	const cardData = [
 		{
-			imageSrc: 'assets/images/embrace-warmth-square.jpg',
-			imageAlt: 'Card 1 image',
-			title: 'Title 1',
-			subtitle: 'Subtitle 1',
+			imageSrc: 'assets/images/SSA-logo-blue.png',
+			imageAlt: 'A collection of original watercolor paintings and handmade geometric knitwear',
+			title: 'Original Works',
+			subtitle: 'One-of-a-kind paintings, 3D shadow boxes, and wearable fiber arts defined by organic fractals.',
 		},
 		{
-			imageSrc: 'assets/images/escape-into-art-square.png',
-			imageAlt: 'Card 2 image',
-			title: 'Title 2',
-			subtitle: 'Subtitle 2',
+			imageSrc: 'assets/images/SSA-logo-blue.png',
+			imageAlt: 'Fine art posters and greeting cards featuring stylized mountain and coastal landscapes',
+			title: 'Art Prints & Stationery',
+			subtitle: 'Archival gallery prints and nature-inspired paper goods capturing the serenity of land and sea.',
 		},
 		{
-			imageSrc: 'assets/images/watercolor-magic.jpg',
-			imageAlt: 'Card 3 image',
-			title: 'Title 3',
-			subtitle: 'Subtitle 3',
+			imageSrc: 'assets/images/SSA-logo-blue.png',
+			imageAlt: 'Modern lifestyle accessories including MagSafe cases and home decor with abstract art',
+			title: 'Merchandise',
+			subtitle: 'Functional art for your daily adventures. Elevate your tech and home with signature geometric patterns.',
 		},
 	];
 

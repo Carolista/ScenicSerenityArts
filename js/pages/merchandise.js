@@ -20,16 +20,11 @@ export function initMerchandisePage() {
 	const heading = document.createElement('h1');
 	heading.textContent = 'Merchandise';
 
-	const paragraph1 = document.createElement('p');
-	paragraph1.textContent = 'Shop our unique merchandise collection.';
-
-	const paragraph2 = document.createElement('p');
-	paragraph2.textContent =
-		'From mugs to tote bags, find the perfect item featuring our scenic artwork.';
+	const paragraph = document.createElement('p');
+	paragraph.textContent = 'Functional art for everyday life. Signature patterns and modern geometric designs transformed into lifestyle essentials for your home and tech.';
 
 	main.appendChild(heading);
-	main.appendChild(paragraph1);
-	main.appendChild(paragraph2);
+	main.appendChild(paragraph);
 
 	// Create card grid
 	const cardGrid = document.createElement('div');

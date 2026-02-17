@@ -61,7 +61,7 @@ export function setupHead(options = {}) {
 	// Add Google Fonts stylesheet
 	const googleFonts = document.createElement('link');
 	googleFonts.href =
-		'https://fonts.googleapis.com/css2?family=Hurricane&family=Quicksand:wght@300..700&family=Tenor+Sans&display=swap';
+		'https://fonts.googleapis.com/css2?family=Hurricane&family=Quicksand:wght@300..700&family=Tenor+Sans&family=Birthstone&family=Cookie&family=Marck+Script&display=swap';
 	googleFonts.rel = 'stylesheet';
 	head.appendChild(googleFonts);
 

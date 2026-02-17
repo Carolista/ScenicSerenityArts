@@ -20,16 +20,11 @@ export function initArtPrintsPage() {
 	const heading = document.createElement('h1');
 	heading.textContent = 'Art Prints & Stationery';
 
-	const paragraph1 = document.createElement('p');
-	paragraph1.textContent = 'Browse our selection of high-quality art prints.';
-
-	const paragraph2 = document.createElement('p');
-	paragraph2.textContent =
-		'Bring the beauty of scenic landscapes to your home with our professionally printed reproductions.';
+	const paragraph = document.createElement('p');
+	paragraph.textContent = 'Bring the spirit of the mountains and the sea into your space. High-quality archival reproductions and paper goods designed for collectors and correspondents alike.';
 
 	main.appendChild(heading);
-	main.appendChild(paragraph1);
-	main.appendChild(paragraph2);
+	main.appendChild(paragraph);
 
 	// Create card grid
 	const cardGrid = document.createElement('div');
