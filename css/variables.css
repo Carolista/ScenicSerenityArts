@@ -33,10 +33,11 @@
 
 	/* Layout */
 	--max-width: 1200px;
-	--logo-height: clamp(48px, 10vw, 72px);
+	--logo-height-base: clamp(48px, 10vw, 72px);
+	--logo-height: calc(var(--logo-height-base) * 2);
 	--header-padding-vertical: var(--spacing-sm);
 	--header-height: calc(
-		var(--logo-height) + (var(--header-padding-vertical) * 2)
+		var(--logo-height-base) + (var(--header-padding-vertical) * 2)
 	);
 
 	/* Breakpoints */

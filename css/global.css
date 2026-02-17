@@ -17,18 +17,36 @@ body {
 header {
 	display: flex;
 	justify-content: space-between;
-	align-items: flex-end;
+	align-items: flex-start;
 	padding: var(--spacing-sm) var(--spacing-lg);
 	height: var(--header-height);
 	background-color: var(--color-primary-medium);
 	border-bottom: 1px solid var(--color-primary-dark);
+	position: relative;
 }
 
 .logo-link {
 	height: var(--logo-height);
 	display: flex;
 	align-items: center;
+	position: relative;
+	z-index: 100;
 	transition: opacity 0.3s ease;
+	margin-top: 0;
+}
+
+.logo-link::before {
+	content: '';
+	position: absolute;
+	width: calc(var(--logo-height) * 1.1 - 16px);
+	height: calc(var(--logo-height) * 1.1);
+	background-color: var(--color-accent-light);
+	clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
+	left: 50%;
+	top: 50%;
+	transform: translate(-50%, -50%);
+	z-index: -1;
+	box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
 }
 
 .logo-link:hover {
@@ -38,6 +56,12 @@ header {
 .logo-link img {
 	height: 100%;
 	width: auto;
+	position: relative;
+	z-index: 1;
+}
+
+nav {
+	align-self: flex-end;
 }
 
 nav ul {
@@ -67,6 +91,7 @@ main {
 h1 {
 	font-family: var(--font-family-scenic);
 	font-size: var(--font-size-xxl);
+	margin-top: var(--spacing-lg);
 	margin-bottom: var(--spacing-md);
 	color: var(--color-primary);
 }
@@ -75,7 +100,7 @@ h1#ssa-large {
 	font-family: var(--font-family-serenity);
 	font-size: 5rem;
 	letter-spacing: -0.3rem;
-    color: var(--color-accent-light)
+	color: var(--color-primary-light);
 }
 
 h2 {
