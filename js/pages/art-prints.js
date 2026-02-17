@@ -5,7 +5,7 @@
 
 import { setupHead } from '../utils/head.js';
 import { initHeader } from '../components/header.js';
-import { createCard } from '../components/card.js';
+import { createSection } from '../components/section.js';
 
 export function initArtPrintsPage() {
 	// Setup head elements
@@ -21,46 +21,78 @@ export function initArtPrintsPage() {
 	heading.textContent = 'Art Prints & Stationery';
 
 	const paragraph = document.createElement('p');
-	paragraph.textContent = 'Bring the spirit of the mountains and the sea into your space. High-quality archival reproductions and paper goods designed for collectors and correspondents alike.';
+	paragraph.textContent =
+		'Bring the spirit of the mountains and the sea into your space. High-quality archival reproductions and paper goods designed for collectors and correspondents alike.';
 
 	main.appendChild(heading);
 	main.appendChild(paragraph);
 
-	// Create card grid
-	const cardGrid = document.createElement('div');
-	cardGrid.className = 'card-grid';
-
-	// Define card data
-	const cardData = [
-		{
-			imageSrc: 'assets/images/SSA-logo-blue.png',
-			imageAlt: 'Posters',
-			title: 'Posters',
-			subtitle: '(Subtitle)',
-		},
-		{
-			imageSrc: 'assets/images/SSA-logo-blue.png',
-			imageAlt: 'Cards',
-			title: 'Cards',
-			subtitle: '(Subtitle)',
-		},
-		{
-			imageSrc: 'assets/images/SSA-logo-blue.png',
-			imageAlt: 'Postcards',
-			title: 'Postcards',
-			subtitle: '(Subtitle)',
-		},
-	];
-
-	// Create cards
-	cardData.forEach(data => {
-		const card = createCard(data);
-		if (card) {
-			cardGrid.appendChild(card);
-		}
+	// Cards & Postcards Section
+	const cardsSection = createSection({
+		heading: 'Cards & Postcards',
+		description:
+			'Miniature art for collecting or sending, inspired by the beauty of the wilderness.',
+		cards: [
+			{
+				imageSrc: 'assets/images/SSA-logo-blue.png',
+				imageAlt: 'Cards',
+				title: 'Cards',
+				subtitle: '(Subtitle)',
+			},
+			{
+				imageSrc: 'assets/images/SSA-logo-blue.png',
+				imageAlt: 'Postcards',
+				title: 'Postcards',
+				subtitle: '(Subtitle)',
+			},
+		],
 	});
 
-	main.appendChild(cardGrid);
+	// Art Prints & Posters Section
+	const printsSection = createSection({
+		heading: 'Art Prints & Posters',
+		description:
+			'Premium archival reproductions that bring a modern gallery feel to any room.',
+		cards: [
+			{
+				imageSrc: 'assets/images/SSA-logo-blue.png',
+				imageAlt: 'Art Prints',
+				title: 'Art Prints',
+				subtitle: '(Subtitle)',
+			},
+			{
+				imageSrc: 'assets/images/SSA-logo-blue.png',
+				imageAlt: 'Posters',
+				title: 'Posters',
+				subtitle: '(Subtitle)',
+			},
+		],
+	});
+
+	// Notebooks & Journals Section
+	const notebooksSection = createSection({
+		heading: 'Notebooks & Journals',
+		description:
+			'Hardcover spaces for your thoughts, wrapped in organic and mathematical art.',
+		cards: [
+			{
+				imageSrc: 'assets/images/SSA-logo-blue.png',
+				imageAlt: 'Notebooks',
+				title: 'Notebooks',
+				subtitle: '(Subtitle)',
+			},
+			{
+				imageSrc: 'assets/images/SSA-logo-blue.png',
+				imageAlt: 'Journals',
+				title: 'Journals',
+				subtitle: '(Subtitle)',
+			},
+		],
+	});
+
+	main.appendChild(cardsSection);
+	main.appendChild(printsSection);
+	main.appendChild(notebooksSection);
 
 	document.body.appendChild(main);
 }

@@ -71,12 +71,39 @@ h1 {
 	color: var(--color-primary);
 }
 
+h1#ssa-large {
+	font-family: var(--font-family-serenity);
+	font-size: 5rem;
+	letter-spacing: -0.3rem;
+    color: var(--color-accent-light)
+}
+
+h2 {
+	font-family: var(--font-family-primary);
+	font-size: var(--font-size-xl);
+	margin-bottom: var(--spacing-sm);
+	color: var(--color-accent-medium);
+}
+
 p {
 	margin-bottom: var(--spacing-sm);
 }
 
 .about-page main p:first-of-type {
 	font-weight: bold;
+}
+
+/* Product Section Component */
+.product-section {
+	margin-bottom: var(--spacing-xl);
+}
+
+.product-section:last-child {
+	margin-bottom: 0;
+}
+
+.section-description {
+	margin-bottom: var(--spacing-sm);
 }
 
 /* Card Component */
@@ -133,7 +160,7 @@ p {
 	display: grid;
 	grid-template-columns: repeat(3, 1fr);
 	gap: var(--spacing-lg);
-	margin-top: var(--spacing-xl);
+	margin-top: var(--spacing-md);
 	align-items: start;
 }
 
@@ -206,14 +233,6 @@ p {
 
 .mobile-nav-modal a:hover {
 	color: var(--color-accent-light);
-}
-
-/* Home Page */
-
-#ssa-large {
-	font-family: var(--font-family-serenity);
-	font-size: 5rem;
-	letter-spacing: -0.3rem;
 }
 
 /* Responsive Design */

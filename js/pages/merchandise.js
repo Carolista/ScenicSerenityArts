@@ -5,7 +5,7 @@
 
 import { setupHead } from '../utils/head.js';
 import { initHeader } from '../components/header.js';
-import { createCard } from '../components/card.js';
+import { createSection } from '../components/section.js';
 
 export function initMerchandisePage() {
 	// Setup head elements
@@ -21,64 +21,62 @@ export function initMerchandisePage() {
 	heading.textContent = 'Merchandise';
 
 	const paragraph = document.createElement('p');
-	paragraph.textContent = 'Functional art for everyday life. Signature patterns and modern geometric designs transformed into lifestyle essentials for your home and tech.';
+	paragraph.textContent =
+		'Functional art for everyday life. Signature patterns and modern geometric designs transformed into lifestyle essentials for your home and tech.';
 
 	main.appendChild(heading);
 	main.appendChild(paragraph);
 
-	// Create card grid
-	const cardGrid = document.createElement('div');
-	cardGrid.className = 'card-grid';
-
-	// Define card data
-	const cardData = [
-		{
-			imageSrc: 'assets/images/SSA-logo-blue.png',
-			imageAlt: 'Apple Watch Bands',
-			title: 'Apple Watch Bands',
-			subtitle: '(Subtitle)',
-		},
-		{
-			imageSrc: 'assets/images/SSA-logo-blue.png',
-			imageAlt: 'Clocks',
-			title: 'Clocks',
-			subtitle: '(Subtitle)',
-		},
-		{
-			imageSrc: 'assets/images/SSA-logo-blue.png',
-			imageAlt: 'MagSafe Phone Cases',
-			title: 'MagSafe Phone Cases',
-			subtitle: '(Subtitle)',
-		},
-		{
-			imageSrc: 'assets/images/SSA-logo-blue.png',
-			imageAlt: 'Snap Phone Cases',
-			title: 'Snap Phone Cases',
-			subtitle: '(Subtitle)',
-		},
-		{
-			imageSrc: 'assets/images/SSA-logo-blue.png',
-			imageAlt: 'Tough Phone Cases',
-			title: 'Tough Phone Cases',
-			subtitle: '(Subtitle)',
-		},
-		{
-			imageSrc: 'assets/images/SSA-logo-blue.png',
-			imageAlt: 'Notebooks & Journals',
-			title: 'Notebooks & Journals',
-			subtitle: '(Subtitle)',
-		},
-	];
-
-	// Create cards
-	cardData.forEach(data => {
-		const card = createCard(data);
-		if (card) {
-			cardGrid.appendChild(card);
-		}
+	// Phone Cases Section
+	const phoneCasesSection = createSection({
+		heading: 'Phone Cases',
+		description:
+			'Durable protection featuring signature watercolor and fractal patterns.',
+		cards: [
+			{
+				imageSrc: 'assets/images/SSA-logo-blue.png',
+				imageAlt: 'MagSafe Phone Cases',
+				title: 'MagSafe Phone Cases',
+				subtitle: '(Subtitle)',
+			},
+			{
+				imageSrc: 'assets/images/SSA-logo-blue.png',
+				imageAlt: 'Snap Phone Cases',
+				title: 'Snap Phone Cases',
+				subtitle: '(Subtitle)',
+			},
+			{
+				imageSrc: 'assets/images/SSA-logo-blue.png',
+				imageAlt: 'Tough Phone Cases',
+				title: 'Tough Phone Cases',
+				subtitle: '(Subtitle)',
+			},
+		],
 	});
 
-	main.appendChild(cardGrid);
+	// Home Tech Section
+	const homeTechSection = createSection({
+		heading: 'Home Tech',
+		description:
+			'Functional designs that turn everyday objects into artistic statements.',
+		cards: [
+			{
+				imageSrc: 'assets/images/SSA-logo-blue.png',
+				imageAlt: 'Apple Watch Bands',
+				title: 'Apple Watch Bands',
+				subtitle: '(Subtitle)',
+			},
+			{
+				imageSrc: 'assets/images/SSA-logo-blue.png',
+				imageAlt: 'Clocks',
+				title: 'Clocks',
+				subtitle: '(Subtitle)',
+			},
+		],
+	});
+
+	main.appendChild(phoneCasesSection);
+	main.appendChild(homeTechSection);
 
 	document.body.appendChild(main);
 }
