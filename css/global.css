@@ -31,8 +31,12 @@ header {
 	align-items: center;
 	position: relative;
 	z-index: 100;
-	transition: opacity 0.3s ease;
 	margin-top: 0;
+	transition: filter 0.3s ease;
+}
+
+.logo-link:hover {
+	filter: drop-shadow(4px 4px 8px rgba(0, 0, 0, 0.3));
 }
 
 .logo-link::before {
@@ -46,11 +50,10 @@ header {
 	top: 50%;
 	transform: translate(-50%, -50%);
 	z-index: -1;
-	box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
 }
 
-.logo-link:hover {
-	opacity: 0.8;
+.logo-link:hover::before {
+	box-shadow: 4px 4px 12px rgba(0, 0, 0, 0.3);
 }
 
 .logo-link img {
