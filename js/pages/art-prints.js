@@ -28,8 +28,8 @@ export function initArtPrintsPage() {
 	main.appendChild(paragraph);
 
 	// Cards & Postcards Section
-	const cardsSection = createSection({
-		heading: 'Cards & Postcards',
+	const paperGoodsSection = createSection({
+		heading: 'Paper Goods',
 		description:
 			'Miniature art for collecting or sending, inspired by the beauty of the wilderness.',
 		cards: [
@@ -37,27 +37,18 @@ export function initArtPrintsPage() {
 				imageSrc: 'assets/images/SSA-logo-blue.png',
 				imageAlt: 'Cards',
 				title: 'Cards',
-				subtitle: '',
+				subtitle: 'Artistic greeting cards for every occasion, featuring original art inspired by the beauty of the natural world.',
 				linkURL:
 					'https://www.etsy.com/shop/ScenicSerenityArts?ref=dashboard-header&section_id=52438522',
 			},
 			{
 				imageSrc: 'assets/images/SSA-logo-blue.png',
 				imageAlt: 'Postcards',
-				title: 'Postcards (UK only)',
-				subtitle: '',
+				title: 'Postcards',
+				subtitle: 'Small-scale prints based on original art. (Note: Currently exclusive to UK shipping.)',
 				linkURL:
 					'https://www.etsy.com/shop/ScenicSerenityArts?ref=dashboard-header&section_id=52399089',
 			},
-		],
-	});
-
-	// Art Prints & Posters Section
-	const printsSection = createSection({
-		heading: 'Art Prints & Posters',
-		description:
-			'Premium archival reproductions that bring a modern gallery feel to any room.',
-		cards: [
 			// {
 			// 	imageSrc: 'assets/images/SSA-logo-blue.png',
 			// 	imageAlt: 'Art Prints',
@@ -69,7 +60,7 @@ export function initArtPrintsPage() {
 				imageSrc: 'assets/images/SSA-logo-blue.png',
 				imageAlt: 'Posters',
 				title: 'Posters',
-				subtitle: '(Subtitle)',
+				subtitle: 'Archival-quality gallery reproductions of my most popular watercolor landscapes.',
 				linkURL:
 					'https://www.etsy.com/shop/ScenicSerenityArts?ref=dashboard-header&section_id=52461235',
 			},
@@ -77,8 +68,8 @@ export function initArtPrintsPage() {
 	});
 
 	// Notebooks & Journals Section
-	const notebooksSection = createSection({
-		heading: 'Notebooks & Journals',
+	const writingSection = createSection({
+		heading: 'Writing & Reflection',
 		description:
 			'Hardcover spaces for your thoughts, wrapped in organic and mathematical art.',
 		cards: [
@@ -86,7 +77,7 @@ export function initArtPrintsPage() {
 				imageSrc: 'assets/images/SSA-logo-blue.png',
 				imageAlt: 'Notebooks',
 				title: 'Notebooks',
-				subtitle: '(Subtitle)',
+				subtitle: 'Hardcover spiral notebooks featuring original art—perfect for your daily logs and ruminations.',
 				linkURL:
 					'https://www.etsy.com/shop/ScenicSerenityArts?ref=dashboard-header&section_id=52384830',
 			},
@@ -94,15 +85,14 @@ export function initArtPrintsPage() {
 			// 	imageSrc: 'assets/images/SSA-logo-blue.png',
 			// 	imageAlt: 'Journals',
 			// 	title: 'Journals',
-			// 	subtitle: '(Subtitle)',
+			// 	subtitle: 'Premium bound journals designed to protect your thoughts with a cover of serene, abstract art.',
 			//     linkURL: '',
 			// },
 		],
 	});
 
-	main.appendChild(cardsSection);
-	main.appendChild(printsSection);
-	main.appendChild(notebooksSection);
+	main.appendChild(paperGoodsSection);
+	main.appendChild(writingSection);
 
 	document.body.appendChild(main);
 }

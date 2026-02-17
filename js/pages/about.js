@@ -28,7 +28,7 @@ export function initAboutPage() {
 	const paragraphs = [
 		'Art is my late-night happy place.',
 		'By day, I live in the world of logic and analysis as a software developer and instructor. By night, I trade syntax for salt-texture and code for color. My work is a bridge between these two worlds: the structured, mathematical patterns of geometry and the unpredictable, organic "blooms" of watercolor.',
-		'Growing up near the ocean gave me a deep appreciation for the fluid rhythms of the coast, a theme that frequently resurfaces in my work even as I now find inspiration in the misty silhouettes of the Great Smoky Mountains.',
+		'Growing up near the ocean gave me a deep appreciation for the fluid rhythms of the coast, a theme that frequently resurfaces in my work even as I now find inspiration in the misty silhouettes of the Great Smoky Mountains in Chattanooga, Tennessee.',
 		'In 2024, I made a major shift to turn my "occasional dabbling" into a daily practice. What began as a personal journey for the soul quickly grew into a prolific collection of paintings, fiber arts, and paper crafts. Scenic Serenity Arts was born out of a desire to share that joy with you.',
 		'Every piece I create—from a hand-painted bookmark to a freeform knit scarf—is a celebration of the balance found when we plant our feet in both the analytical and the artistic.',
 	];

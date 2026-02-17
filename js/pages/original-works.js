@@ -29,16 +29,16 @@ export function initOriginalWorksPage() {
 
 	// 3D Shadow Box Paintings Section
 	const shadowBoxSection = createSection({
-		heading: '3D Shadow Box Paintings',
+		heading: 'Dimensional & Mixed Media',
 		description:
-			'Multi-dimensional landscapes blending watercolor depth with intricate paper-crafted layers.',
+			'Multi-dimensional landscapes blending the richness of watercolors with intricate paper-crafted layers.',
 		cards: [
 			{
 				imageSrc: 'assets/images/SSA-logo-blue.png',
 				imageAlt:
 					'Hand-painted 3D shadow box showing a layered mountain sunset.',
 				title: '3D Shadow Box Paintings',
-				subtitle: '(Subtitle)',
+				subtitle: 'Hand-cut paper layers and rich watercolors artfully composed in a deep, high-quality frame.',
 				linkURL:
 					'https://www.etsy.com/shop/ScenicSerenityArts?ref=dashboard-header&section_id=52170014',
 			},
@@ -49,31 +49,31 @@ export function initOriginalWorksPage() {
 	const originalPaintingsSection = createSection({
 		heading: 'Original Paintings & Drawings',
 		description:
-			'Watercolors, acrylics, and pen-drawn originals exploring the physics of water and the structure of geometry.',
+			'Watercolors, acrylics, and pen-drawn originals exploring the physics of water and the structure of organic geometry.',
 		cards: [
 			{
 				imageSrc: 'assets/images/SSA-logo-blue.png',
 				imageAlt: 'Abstract Paintings',
 				title: 'Abstract Paintings',
-				subtitle: '(Subtitle)',
+				subtitle: 'One-of-a-kind studies of fluid dynamics, metallic fractals, and intuitive color blooms.',
 				linkURL:
 					'https://www.etsy.com/shop/ScenicSerenityArts?ref=dashboard-header&section_id=52360344',
 			},
+            {
+                imageSrc: 'assets/images/SSA-logo-blue.png',
+                imageAlt: 'Graphic Art',
+                title: 'Graphic Art',
+                subtitle: 'Bold, structured compositions where geometry meets hand-drawn precision and celebrates nature.',
+                linkURL:
+                    'https://www.etsy.com/shop/ScenicSerenityArts?ref=dashboard-header&section_id=52372347',
+            },
 			{
 				imageSrc: 'assets/images/SSA-logo-blue.png',
 				imageAlt: 'Nature Paintings',
 				title: 'Nature Paintings',
-				subtitle: '(Subtitle)',
+				subtitle: 'Atmospheric landscapes of the Smokies and the coast, captured in original watercolor.',
 				linkURL:
 					'https://www.etsy.com/shop/ScenicSerenityArts?ref=dashboard-header&section_id=52158821',
-			},
-			{
-				imageSrc: 'assets/images/SSA-logo-blue.png',
-				imageAlt: 'Graphic Art',
-				title: 'Graphic Art',
-				subtitle: '(Subtitle)',
-				linkURL:
-					'https://www.etsy.com/shop/ScenicSerenityArts?ref=dashboard-header&section_id=52372347',
 			},
 		],
 	});
@@ -82,13 +82,13 @@ export function initOriginalWorksPage() {
 	const bookmarksSection = createSection({
 		heading: 'Bookmarks',
 		description:
-			'Miniature watercolor masterpieces finished with hand-drawn details.',
+			'Miniature watercolor masterpieces finished with hand-drawn details for a delightful reading experience.',
 		cards: [
 			{
 				imageSrc: 'assets/images/SSA-logo-blue.png',
 				imageAlt: 'Abstract Bookmarks',
 				title: 'Abstract Bookmarks',
-				subtitle: '(Subtitle)',
+				subtitle: 'Functional fine art featuring unique watercolor fractals and shimmering metallic details.',
 				linkURL:
 					'https://www.etsy.com/shop/ScenicSerenityArts?ref=dashboard-header&section_id=52182819',
 			},
@@ -96,7 +96,7 @@ export function initOriginalWorksPage() {
 				imageSrc: 'assets/images/SSA-logo-blue.png',
 				imageAlt: 'Nature Bookmarks',
 				title: 'Nature Bookmarks',
-				subtitle: '(Subtitle)',
+				subtitle: 'Hand-painted mountain and coastal scenes in a collectible, miniature format.',
 				linkURL:
 					'https://www.etsy.com/shop/ScenicSerenityArts?ref=dashboard-header&section_id=57326833',
 			},
@@ -105,15 +105,23 @@ export function initOriginalWorksPage() {
 
 	// Wearables Section
 	const wearablesSection = createSection({
-		heading: 'Wearables',
+		heading: 'Textible & Fiber Arts',
 		description:
 			'One-of-a-kind accessories featuring intuitive, freeform geometric patterns.',
 		cards: [
+            {
+                imageSrc: 'assets/images/SSA-logo-blue.png',
+                imageAlt: 'Fingerless Mitts',
+                title: 'Fingerless Mitts',
+                subtitle: 'Colorful, hand-knitted warmth for the wrists and hands—no two pairs are alike.',
+                linkURL:
+                    'https://www.etsy.com/shop/ScenicSerenityArts?ref=dashboard-header&section_id=52182559',
+            },
 			{
 				imageSrc: 'assets/images/SSA-logo-blue.png',
 				imageAlt: 'Hats',
 				title: 'Hats',
-				subtitle: '(Subtitle)',
+				subtitle: 'One-of-a-kind headwear crafted with intuitive colorwork and geometric textures.',
 				linkURL:
 					'https://www.etsy.com/shop/ScenicSerenityArts?ref=dashboard-header&section_id=52158686',
 			},
@@ -121,17 +129,9 @@ export function initOriginalWorksPage() {
 				imageSrc: 'assets/images/SSA-logo-blue.png',
 				imageAlt: 'Scarves',
 				title: 'Scarves',
-				subtitle: '(Subtitle)',
+				subtitle: 'Statement-piece neckwear featuring bold chevrons and organic, hand-knitted rhythms.',
 				linkURL:
 					'https://www.etsy.com/shop/ScenicSerenityArts?ref=dashboard-header&section_id=52158592',
-			},
-			{
-				imageSrc: 'assets/images/SSA-logo-blue.png',
-				imageAlt: 'Fingerless Mitts',
-				title: 'Fingerless Mitts',
-				subtitle: '(Subtitle)',
-				linkURL:
-					'https://www.etsy.com/shop/ScenicSerenityArts?ref=dashboard-header&section_id=52182559',
 			},
 		],
 	});
