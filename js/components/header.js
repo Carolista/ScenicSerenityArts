@@ -72,9 +72,9 @@ export function createHeader() {
 	const ul = document.createElement('ul');
 
 	const navItems = [
-		{ text: 'About', href: 'about.html' },
+		{ text: 'About the Artist', href: 'about.html' },
 		{ text: 'Original Works', href: 'original-works.html' },
-		{ text: 'Art Prints', href: 'art-prints.html' },
+		{ text: 'Art Prints & Stationery', href: 'art-prints.html' },
 		{ text: 'Merchandise', href: 'merchandise.html' },
 	];
 

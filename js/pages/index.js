@@ -14,7 +14,8 @@ export function initHomePage() {
 	const main = document.createElement('main');
 
 	const heading = document.createElement('h1');
-	heading.textContent = 'Scenic Serenity Arts';
+	heading.textContent = 'Welcome!';
+    heading.id = 'welcome'
 
 	const paragraph1 = document.createElement('p');
 	paragraph1.textContent =

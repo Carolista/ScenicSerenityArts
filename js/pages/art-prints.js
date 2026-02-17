@@ -4,6 +4,7 @@
  */
 
 import { initHeader } from '../components/header.js';
+import { createCard } from '../components/card.js';
 
 export function initArtPrintsPage() {
     // Initialize header
@@ -13,18 +14,54 @@ export function initArtPrintsPage() {
     const main = document.createElement('main');
 
     const heading = document.createElement('h1');
-    heading.textContent = 'Art Prints';
+    heading.textContent = 'Art Prints & Stationery';
 
     const paragraph1 = document.createElement('p');
     paragraph1.textContent = 'Browse our selection of high-quality art prints.';
 
     const paragraph2 = document.createElement('p');
     paragraph2.textContent =
-    'Bring the beauty of scenic landscapes to your home with our professionally printed reproductions.';
+        'Bring the beauty of scenic landscapes to your home with our professionally printed reproductions.';
 
     main.appendChild(heading);
     main.appendChild(paragraph1);
     main.appendChild(paragraph2);
+
+    // Create card grid
+    const cardGrid = document.createElement('div');
+    cardGrid.className = 'card-grid';
+
+    // Define card data
+    const cardData = [
+        {
+            imageSrc: 'assets/images/SSA-logo-blue.png',
+            imageAlt: 'Posters',
+            title: 'Posters',
+            subtitle: '(Subtitle)',
+        },
+        {
+            imageSrc: 'assets/images/SSA-logo-blue.png',
+            imageAlt: 'Cards',
+            title: 'Cards',
+            subtitle: '(Subtitle)',
+        },
+        {
+            imageSrc: 'assets/images/SSA-logo-blue.png',
+            imageAlt: 'Postcards',
+            title: 'Postcards',
+            subtitle: '(Subtitle)',
+        },
+    ];
+
+    // Create cards
+    cardData.forEach((data) => {
+        const card = createCard(data);
+        if (card) {
+            cardGrid.appendChild(card);
+        }
+    });
+
+    main.appendChild(cardGrid);
 
     document.body.appendChild(main);
 }

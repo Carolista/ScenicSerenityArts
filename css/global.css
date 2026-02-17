@@ -204,6 +204,13 @@ p {
 	color: var(--color-accent-light);
 }
 
+/* Home Page */
+
+#welcome {
+    font-family: var(--font-family-serenity);
+    font-size: 3rem;
+}
+
 /* Responsive Design */
 @media (max-width: 1024px) {
 	.card-grid {

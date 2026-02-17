@@ -13,7 +13,7 @@ export function initAboutPage() {
 	const main = document.createElement('main');
 
 	const heading = document.createElement('h1');
-	heading.textContent = 'About Scenic Serenity Arts';
+	heading.textContent = 'About the Artist';
 
 	const paragraph1 = document.createElement('p');
 	paragraph1.textContent =
