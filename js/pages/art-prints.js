@@ -37,13 +37,17 @@ export function initArtPrintsPage() {
 				imageSrc: 'assets/images/SSA-logo-blue.png',
 				imageAlt: 'Cards',
 				title: 'Cards',
-				subtitle: '(Subtitle)',
+				subtitle: '',
+				linkURL:
+					'https://www.etsy.com/shop/ScenicSerenityArts?ref=dashboard-header&section_id=52438522',
 			},
 			{
 				imageSrc: 'assets/images/SSA-logo-blue.png',
 				imageAlt: 'Postcards',
-				title: 'Postcards',
-				subtitle: '(Subtitle)',
+				title: 'Postcards (UK only)',
+				subtitle: '',
+				linkURL:
+					'https://www.etsy.com/shop/ScenicSerenityArts?ref=dashboard-header&section_id=52399089',
 			},
 		],
 	});
@@ -54,17 +58,20 @@ export function initArtPrintsPage() {
 		description:
 			'Premium archival reproductions that bring a modern gallery feel to any room.',
 		cards: [
-			{
-				imageSrc: 'assets/images/SSA-logo-blue.png',
-				imageAlt: 'Art Prints',
-				title: 'Art Prints',
-				subtitle: '(Subtitle)',
-			},
+			// {
+			// 	imageSrc: 'assets/images/SSA-logo-blue.png',
+			// 	imageAlt: 'Art Prints',
+			// 	title: 'Art Prints',
+			// 	subtitle: '(Subtitle)',
+			//  linkURL: '',
+			// },
 			{
 				imageSrc: 'assets/images/SSA-logo-blue.png',
 				imageAlt: 'Posters',
 				title: 'Posters',
 				subtitle: '(Subtitle)',
+				linkURL:
+					'https://www.etsy.com/shop/ScenicSerenityArts?ref=dashboard-header&section_id=52461235',
 			},
 		],
 	});
@@ -80,13 +87,16 @@ export function initArtPrintsPage() {
 				imageAlt: 'Notebooks',
 				title: 'Notebooks',
 				subtitle: '(Subtitle)',
+				linkURL:
+					'https://www.etsy.com/shop/ScenicSerenityArts?ref=dashboard-header&section_id=52384830',
 			},
-			{
-				imageSrc: 'assets/images/SSA-logo-blue.png',
-				imageAlt: 'Journals',
-				title: 'Journals',
-				subtitle: '(Subtitle)',
-			},
+			// {
+			// 	imageSrc: 'assets/images/SSA-logo-blue.png',
+			// 	imageAlt: 'Journals',
+			// 	title: 'Journals',
+			// 	subtitle: '(Subtitle)',
+			//     linkURL: '',
+			// },
 		],
 	});
 

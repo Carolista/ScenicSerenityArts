@@ -12,7 +12,8 @@
  * @param {string} [options.title] - Card title text
  * @param {string} [options.subtitle] - Card subtitle text
  * @param {string} [options.className] - Additional CSS class for the card
- * @returns {HTMLElement|string} The card element or empty string if no content provided
+ * @param {string} [options.linkURL] - URL to link the card to
+ * @returns {HTMLElement|string} The card element (wrapped in link if linkURL provided) or empty string if no content provided
  */
 export function createCard(options = {}) {
 	try {
@@ -22,12 +23,14 @@ export function createCard(options = {}) {
 			title,
 			subtitle,
 			className = '',
+            linkURL = '',
 		} = options;
 
 		// Check if all values are empty or blank
 		const hasImage = imageSrc && imageSrc.trim() !== '';
 		const hasTitle = title && title.trim() !== '';
 		const hasSubtitle = subtitle && subtitle.trim() !== '';
+        const hasLinkURL = linkURL && linkURL.trim() !== '';
 
 		if (!hasImage && !hasTitle && !hasSubtitle) {
 			throw new Error(
@@ -70,7 +73,28 @@ export function createCard(options = {}) {
 			card.appendChild(content);
 		}
 
-		return card;
+	// Wrap card in link if linkURL provided
+	if (hasLinkURL) {
+		const link = document.createElement('a');
+		link.href = linkURL;
+		
+		// Add title attribute for tooltip
+		if (imageAlt) {
+			link.title = imageAlt;
+		}
+		
+		// Add target="_blank" for external links
+		const isExternal = linkURL.startsWith('http://') || linkURL.startsWith('https://');
+		if (isExternal) {
+			link.target = '_blank';
+			link.rel = 'noopener noreferrer';
+		}
+		
+		link.appendChild(card);
+		return link;
+	}
+
+	return card;
 	} catch (error) {
 		console.error('Error creating card:', error.message);
 		return '';

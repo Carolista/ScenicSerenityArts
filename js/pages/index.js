@@ -39,18 +39,21 @@ export function initHomePage() {
 			imageAlt: 'A collection of original watercolor paintings and handmade geometric knitwear',
 			title: 'Original Works',
 			subtitle: 'One-of-a-kind paintings, 3D shadow boxes, and wearable fiber arts defined by organic fractals.',
+            linkURL: '../original-works.html'
 		},
 		{
 			imageSrc: 'assets/images/SSA-logo-blue.png',
 			imageAlt: 'Fine art posters and greeting cards featuring stylized mountain and coastal landscapes',
 			title: 'Art Prints & Stationery',
 			subtitle: 'Archival gallery prints and nature-inspired paper goods capturing the serenity of land and sea.',
+            linkURL: '../art-prints.html'
 		},
 		{
 			imageSrc: 'assets/images/SSA-logo-blue.png',
 			imageAlt: 'Modern lifestyle accessories including MagSafe cases and home decor with abstract art',
 			title: 'Merchandise',
 			subtitle: 'Functional art for your daily adventures. Elevate your tech and home with signature geometric patterns.',
+            linkURL: '../merchandise.html'
 		},
 	];
 

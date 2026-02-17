@@ -39,6 +39,8 @@ export function initOriginalWorksPage() {
 					'Hand-painted 3D shadow box showing a layered mountain sunset.',
 				title: '3D Shadow Box Paintings',
 				subtitle: '(Subtitle)',
+				linkURL:
+					'https://www.etsy.com/shop/ScenicSerenityArts?ref=dashboard-header&section_id=52170014',
 			},
 		],
 	});
@@ -46,25 +48,32 @@ export function initOriginalWorksPage() {
 	// Original Paintings Section
 	const originalPaintingsSection = createSection({
 		heading: 'Original Paintings & Drawings',
-		description: 'Watercolors, acrylics, and pen-drawn originals exploring the physics of water and the structure of geometry.',
+		description:
+			'Watercolors, acrylics, and pen-drawn originals exploring the physics of water and the structure of geometry.',
 		cards: [
 			{
 				imageSrc: 'assets/images/SSA-logo-blue.png',
 				imageAlt: 'Abstract Paintings',
 				title: 'Abstract Paintings',
 				subtitle: '(Subtitle)',
+				linkURL:
+					'https://www.etsy.com/shop/ScenicSerenityArts?ref=dashboard-header&section_id=52360344',
 			},
 			{
 				imageSrc: 'assets/images/SSA-logo-blue.png',
 				imageAlt: 'Nature Paintings',
 				title: 'Nature Paintings',
 				subtitle: '(Subtitle)',
+				linkURL:
+					'https://www.etsy.com/shop/ScenicSerenityArts?ref=dashboard-header&section_id=52158821',
 			},
 			{
 				imageSrc: 'assets/images/SSA-logo-blue.png',
 				imageAlt: 'Graphic Art',
 				title: 'Graphic Art',
 				subtitle: '(Subtitle)',
+				linkURL:
+					'https://www.etsy.com/shop/ScenicSerenityArts?ref=dashboard-header&section_id=52372347',
 			},
 		],
 	});
@@ -72,19 +81,24 @@ export function initOriginalWorksPage() {
 	// Bookmarks Section
 	const bookmarksSection = createSection({
 		heading: 'Bookmarks',
-		description: 'Miniature watercolor masterpieces finished with hand-drawn details.',
+		description:
+			'Miniature watercolor masterpieces finished with hand-drawn details.',
 		cards: [
 			{
 				imageSrc: 'assets/images/SSA-logo-blue.png',
 				imageAlt: 'Abstract Bookmarks',
 				title: 'Abstract Bookmarks',
 				subtitle: '(Subtitle)',
+				linkURL:
+					'https://www.etsy.com/shop/ScenicSerenityArts?ref=dashboard-header&section_id=52182819',
 			},
 			{
 				imageSrc: 'assets/images/SSA-logo-blue.png',
 				imageAlt: 'Nature Bookmarks',
 				title: 'Nature Bookmarks',
 				subtitle: '(Subtitle)',
+				linkURL:
+					'https://www.etsy.com/shop/ScenicSerenityArts?ref=dashboard-header&section_id=57326833',
 			},
 		],
 	});
@@ -92,25 +106,32 @@ export function initOriginalWorksPage() {
 	// Wearables Section
 	const wearablesSection = createSection({
 		heading: 'Wearables',
-		description: 'One-of-a-kind accessories featuring intuitive, freeform geometric patterns.',
+		description:
+			'One-of-a-kind accessories featuring intuitive, freeform geometric patterns.',
 		cards: [
 			{
 				imageSrc: 'assets/images/SSA-logo-blue.png',
 				imageAlt: 'Hats',
 				title: 'Hats',
 				subtitle: '(Subtitle)',
+				linkURL:
+					'https://www.etsy.com/shop/ScenicSerenityArts?ref=dashboard-header&section_id=52158686',
 			},
 			{
 				imageSrc: 'assets/images/SSA-logo-blue.png',
 				imageAlt: 'Scarves',
 				title: 'Scarves',
 				subtitle: '(Subtitle)',
+				linkURL:
+					'https://www.etsy.com/shop/ScenicSerenityArts?ref=dashboard-header&section_id=52158592',
 			},
 			{
 				imageSrc: 'assets/images/SSA-logo-blue.png',
 				imageAlt: 'Fingerless Mitts',
 				title: 'Fingerless Mitts',
 				subtitle: '(Subtitle)',
+				linkURL:
+					'https://www.etsy.com/shop/ScenicSerenityArts?ref=dashboard-header&section_id=52182559',
 			},
 		],
 	});
