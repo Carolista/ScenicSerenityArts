@@ -85,9 +85,9 @@ export function initOriginalWorksPage() {
 
 	// Bookmarks Section
 	const bookmarksSection = createSection({
-		heading: 'Bookmarks',
+		heading: 'Hand-Painted Bookmarks',
 		description:
-			'Miniature watercolor masterpieces finished with hand-drawn details for a delightful reading experience.',
+			'Mini-masterpieces of watercolors finished with hand-drawn details for an artful reading experience.',
 		cards: [
 			{
 				mediaSrc: 'assets/videos/bookmark-abstract.mp4',
@@ -112,7 +112,7 @@ export function initOriginalWorksPage() {
 
 	// Wearables Section
 	const wearablesSection = createSection({
-		heading: 'Textible & Fiber Arts',
+		heading: 'Textiles & Fiber Arts',
 		description:
 			'One-of-a-kind accessories featuring intuitive, freeform geometric patterns.',
 		cards: [

@@ -24,7 +24,7 @@ export function initHomePage() {
 
 	const paragraph = document.createElement('p');
 	paragraph.textContent =
-		'Where the wilderness meets the mathematical. Explore a collection of intuitive art, fiber goods, and functional decor inspired by the organic rhythms of the Great Smoky Mountains and the Atlantic coast.';
+		'Where art illuminates the analytical and geology intersects with geometry. Explore a collection of intuitive art, fiber goods, and functional decor inspired by the organic rhythms of the Great Smoky Mountains and the Florida coast.';
 
 	main.appendChild(heading);
 	main.appendChild(paragraph);
