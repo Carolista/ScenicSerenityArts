@@ -1,15 +1,17 @@
 :root {
 	/* Colors */
 
-	--color-primary-dark: #0d1e24;
+	--color-primary-darkest: #0d1e24;
+	--color-primary-dark: #013547;
 	--color-primary-medium: #0d4f67;
 	--color-primary-light: #016b83;
-	--color-accent-light: #dda15e;
 	--color-accent-medium: #bc6c25;
+	--color-accent-light: #dda15e;
+	--color-accent-lightest: #fce3c0;
 	--color-off-white: #fffefa;
 
 	--color-background: var(--color-off-white);
-	--color-text: var(--color-primary-dark);
+	--color-text: var(--color-primary-darkest);
 	--color-primary: var(--color-primary-medium);
 	--color-secondary: var(--color-primary-light);
 

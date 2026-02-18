@@ -11,6 +11,11 @@ html {
 
 body {
 	background-color: var(--color-background);
+	background-image: url('../assets/images/bkgs/watercolor-paper-texture.jpg');
+	background-size: cover;
+	background-position: center;
+	background-repeat: no-repeat;
+	background-attachment: fixed;
 	color: var(--color-text);
 	font-family: var(--font-family-primary);
 	font-size: var(--font-size-base);
@@ -29,7 +34,7 @@ header {
 	padding: var(--spacing-sm) var(--spacing-lg);
 	height: var(--header-height);
 	background-color: var(--color-primary-medium);
-	border-bottom: 1px solid var(--color-primary-dark);
+	border-bottom: 16px solid var(--color-primary-dark);
 	position: relative;
 }
 
@@ -51,8 +56,8 @@ header {
 .logo-link::before {
 	content: '';
 	position: absolute;
-	width: calc(var(--logo-height) * 1.1 - 16px);
-	height: calc(var(--logo-height) * 1.1);
+	width: calc(var(--logo-height) * 1.06 - 18px);
+	height: calc(var(--logo-height) * 1.06);
 	background-color: var(--color-accent-light);
 	clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
 	left: 50%;
@@ -100,7 +105,7 @@ main {
 
 /* Footer Styles */
 footer {
-	background-color: var(--color-primary-dark);
+	background-color: var(--color-primary-darkest);
 	color: var(--color-off-white);
 	text-align: center;
 	padding: var(--spacing-md) var(--spacing-lg);
@@ -138,7 +143,7 @@ p {
 }
 
 .about-page section {
-	background-color: rgba(221, 161, 94, 0.35);
+	background-color: var(--color-accent-lightest);
 	border-radius: var(--border-radius);
 	padding: var(--spacing-sm);
 	max-width: max-content;
@@ -156,7 +161,8 @@ p {
 /* Product Section Component */
 .product-section {
 	margin-bottom: var(--spacing-xl);
-	border-top: 20px solid var(--color-primary-light);
+	background-color: rgba(255, 254, 250, 0.6);
+	border-top: 24px solid var(--color-primary-light);
 	border-right: 2px solid var(--color-primary-light);
 	border-bottom: 2px solid var(--color-primary-light);
 	border-left: 2px solid var(--color-primary-light);
@@ -177,7 +183,8 @@ p {
 	width: 100%;
 	display: flex;
 	flex-direction: column;
-	border: var(--card-border-width) solid var(--border-color-soft);
+	background-color: var(--color-off-white);
+	border: var(--card-border-width) solid var(--color-accent-lightest);
 	border-radius: var(--border-radius);
 	overflow: hidden;
 	transition: box-shadow 0.3s ease;
