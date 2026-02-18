@@ -50,7 +50,7 @@ header {
 }
 
 .logo-link:hover {
-	filter: drop-shadow(4px 4px 8px rgba(0, 0, 0, 0.3));
+	filter: drop-shadow(2px 2px 2px rgba(0, 0, 0, 0.3));
 }
 
 .logo-link::before {
