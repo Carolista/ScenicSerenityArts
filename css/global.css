@@ -33,8 +33,8 @@ header {
 	align-items: flex-end;
 	padding: var(--spacing-sm) var(--spacing-lg);
 	height: var(--header-height);
-	background-color: var(--color-primary-medium);
-	border-bottom: 16px solid var(--color-primary-dark);
+	background-color: var(--color-primary-dark);
+	border-bottom: 16px solid var(--color-primary-medium);
 	position: relative;
 }
 
