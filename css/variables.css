@@ -46,6 +46,7 @@
 
 	/* Border */
 	--border-radius: 4px;
+	--border-radius-lg: 8px;
 	--border-color-soft: #d0d0d0;
 
 	/* Card */
