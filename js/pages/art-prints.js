@@ -35,16 +35,16 @@ export function initArtPrintsPage() {
 			'Miniature art for collecting or sending, inspired by the beauty of the wilderness.',
 		cards: [
 			{
-				mediaSrc: 'assets/images/logos/SSA-logo-blue.png',
-				imageAlt: 'Cards',
-				title: 'Cards',
+				mediaSrc: 'assets/videos/notecard.mp4',
+				imageAlt: 'Notecards',
+				title: 'Notecards',
 				subtitle:
-					'Artistic greeting cards for every occasion, featuring original art inspired by the beauty of the natural world.',
+					'Artistic notecards for every occasion, featuring original art inspired by the beauty of the natural world.',
 				linkURL:
 					'https://www.etsy.com/shop/ScenicSerenityArts?ref=dashboard-header&section_id=52438522',
 			},
 			{
-				mediaSrc: 'assets/images/logos/SSA-logo-blue.png',
+				mediaSrc: 'assets/videos/postcard.mp4',
 				imageAlt: 'Postcards',
 				title: 'Postcards',
 				subtitle:
@@ -60,11 +60,11 @@ export function initArtPrintsPage() {
 			//  linkURL: '',
 			// },
 			{
-				mediaSrc: 'assets/images/logos/SSA-logo-blue.png',
+				mediaSrc: 'assets/videos/poster.mp4',
 				imageAlt: 'Posters',
 				title: 'Posters',
 				subtitle:
-					'Archival-quality gallery reproductions of my most popular watercolor landscapes.',
+					'High-quality reproductions of my most popular abstract watercolor paintings.',
 				linkURL:
 					'https://www.etsy.com/shop/ScenicSerenityArts?ref=dashboard-header&section_id=52461235',
 			},
@@ -78,7 +78,7 @@ export function initArtPrintsPage() {
 			'Hardcover spaces for your thoughts, wrapped in organic and mathematical art.',
 		cards: [
 			{
-				mediaSrc: 'assets/images/logos/SSA-logo-blue.png',
+				mediaSrc: 'assets/videos/notebook.mp4',
 				imageAlt: 'Notebooks',
 				title: 'Notebooks',
 				subtitle:

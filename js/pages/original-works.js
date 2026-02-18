@@ -35,7 +35,7 @@ export function initOriginalWorksPage() {
 			'Multi-dimensional landscapes blending the richness of watercolors with intricate paper-crafted layers.',
 		cards: [
 			{
-				mediaSrc: 'assets/images/logos/SSA-logo-blue.png',
+				mediaSrc: 'assets/videos/shadow-box.mp4',
 				imageAlt:
 					'Hand-painted 3D shadow box showing a layered mountain sunset.',
 				title: '3D Shadow Box Paintings',
@@ -54,7 +54,7 @@ export function initOriginalWorksPage() {
 			'Watercolors, acrylics, and pen-drawn originals exploring the physics of water and the structure of organic geometry.',
 		cards: [
 			{
-				mediaSrc: 'assets/images/logos/SSA-logo-blue.png',
+				mediaSrc: 'assets/videos/painting-abstract.mp4',
 				imageAlt: 'Abstract Paintings',
 				title: 'Abstract Paintings',
 				subtitle:
@@ -63,7 +63,7 @@ export function initOriginalWorksPage() {
 					'https://www.etsy.com/shop/ScenicSerenityArts?ref=dashboard-header&section_id=52360344',
 			},
 			{
-				mediaSrc: 'assets/images/logos/SSA-logo-blue.png',
+				mediaSrc: 'assets/videos/painting-graphic.mp4',
 				imageAlt: 'Graphic Art',
 				title: 'Graphic Art',
 				subtitle:
@@ -72,7 +72,7 @@ export function initOriginalWorksPage() {
 					'https://www.etsy.com/shop/ScenicSerenityArts?ref=dashboard-header&section_id=52372347',
 			},
 			{
-				mediaSrc: 'assets/images/logos/SSA-logo-blue.png',
+				mediaSrc: 'assets/videos/painting-nature.mp4',
 				imageAlt: 'Nature Paintings',
 				title: 'Nature Paintings',
 				subtitle:
@@ -90,7 +90,7 @@ export function initOriginalWorksPage() {
 			'Miniature watercolor masterpieces finished with hand-drawn details for a delightful reading experience.',
 		cards: [
 			{
-				mediaSrc: 'assets/images/logos/SSA-logo-blue.png',
+				mediaSrc: 'assets/videos/bookmark-abstract.mp4',
 				imageAlt: 'Abstract Bookmarks',
 				title: 'Abstract Bookmarks',
 				subtitle:
@@ -99,7 +99,7 @@ export function initOriginalWorksPage() {
 					'https://www.etsy.com/shop/ScenicSerenityArts?ref=dashboard-header&section_id=52182819',
 			},
 			{
-				mediaSrc: 'assets/images/logos/SSA-logo-blue.png',
+				mediaSrc: 'assets/videos/bookmark-nature.mp4',
 				imageAlt: 'Nature Bookmarks',
 				title: 'Nature Bookmarks',
 				subtitle:
@@ -117,7 +117,7 @@ export function initOriginalWorksPage() {
 			'One-of-a-kind accessories featuring intuitive, freeform geometric patterns.',
 		cards: [
 			{
-				mediaSrc: 'assets/images/logos/SSA-logo-blue.png',
+				mediaSrc: 'assets/videos/fingerless-mitts.mp4',
 				imageAlt: 'Fingerless Mitts',
 				title: 'Fingerless Mitts',
 				subtitle:
@@ -126,7 +126,7 @@ export function initOriginalWorksPage() {
 					'https://www.etsy.com/shop/ScenicSerenityArts?ref=dashboard-header&section_id=52182559',
 			},
 			{
-				mediaSrc: 'assets/images/logos/SSA-logo-blue.png',
+				mediaSrc: 'assets/videos/hat.mp4',
 				imageAlt: 'Hats',
 				title: 'Hats',
 				subtitle:
