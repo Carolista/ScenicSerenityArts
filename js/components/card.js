@@ -51,10 +51,25 @@ export function createCard(options = {}) {
 				alt: imageAlt,
 			});
 
-			// If media has event handlers (video), attach them to the card
+			// If media has event handlers (video), attach them appropriately
 			if (media._mediaHandlers) {
-				card.addEventListener('mouseenter', media._mediaHandlers.mouseenter);
-				card.addEventListener('mouseleave', media._mediaHandlers.mouseleave);
+				// Desktop: attach hover handlers to card
+				if (media._mediaHandlers.mouseenter) {
+					card.addEventListener('mouseenter', media._mediaHandlers.mouseenter);
+					card.addEventListener('mouseleave', media._mediaHandlers.mouseleave);
+				}
+
+				// Mobile: attach touch handlers to card for press-and-hold replay
+				if (media._mediaHandlers.touchstart) {
+					card.addEventListener('touchstart', media._mediaHandlers.touchstart);
+					card.addEventListener('touchend', media._mediaHandlers.touchend);
+					card.addEventListener('touchcancel', media._mediaHandlers.touchcancel);
+				}
+
+				// Start Intersection Observer if present
+				if (media._mediaHandlers.observer) {
+					media._mediaHandlers.observer.observe(media);
+				}
 			}
 
 			card.appendChild(media);

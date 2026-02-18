@@ -1,7 +1,9 @@
 /**
  * Media Element Component
  * Creates an image or video element based on file extension
- * Videos play on hover with a delay
+ * Videos have device-appropriate interactions:
+ * - Desktop: hover to play (250ms delay)
+ * - Mobile: auto-play on scroll (50% visibility), press-and-hold to replay
  */
 
 /**
@@ -48,7 +50,9 @@ function createImageElement(src, alt) {
 }
 
 /**
- * Create a video element with hover behavior
+ * Create a video element with device-appropriate interaction
+ * Desktop: hover to play
+ * Mobile/Touch: auto-play on scroll into view (50% threshold), press-and-hold to replay
  * @param {string} src - Video source URL
  * @param {string} alt - Accessibility label
  * @returns {HTMLVideoElement}
@@ -65,42 +69,121 @@ function createVideoElement(src, alt) {
 		video.setAttribute('aria-label', alt);
 	}
 
+	// Detect touch device
+	const isTouchDevice =
+		'ontouchstart' in window || navigator.maxTouchPoints > 0;
+
 	let hoverTimer = null;
 	let hasPlayed = false;
+	let hasEnded = false;
 
 	// Reset to first frame
 	const resetVideo = () => {
 		video.currentTime = 0;
 		video.pause();
 		hasPlayed = false;
+		hasEnded = false;
 	};
 
-	// Handle hover start
-	const handleMouseEnter = () => {
-		if (hasPlayed) return;
+	if (isTouchDevice) {
+		// Mobile/Touch: Use Intersection Observer for scroll-based playback
+		const observer = new IntersectionObserver(
+			entries => {
+				entries.forEach(entry => {
+					if (entry.isIntersecting) {
+						// Video scrolled into view - play if hasn't played yet
+						if (!hasPlayed) {
+							video.play();
+							hasPlayed = true;
+						}
+					} else {
+						// Video scrolled out of view - reset
+						resetVideo();
+					}
+				});
+			},
+			{ threshold: 0.5 }, // 50% visibility
+		);
 
-		hoverTimer = setTimeout(() => {
-			if (!hasPlayed) {
-				video.play();
-				hasPlayed = true;
+		// Track when video ends
+		video.addEventListener('ended', () => {
+			hasEnded = true;
+		});
+
+		// Press-and-hold to replay (triggers after 500ms while still pressing)
+		let longPressTimer = null;
+		let hasReplayed = false;
+		const HOLD_THRESHOLD = 500; // milliseconds
+
+		const clearLongPressTimer = () => {
+			if (longPressTimer) {
+				clearTimeout(longPressTimer);
+				longPressTimer = null;
 			}
-		}, 250);
-	};
+		};
 
-	// Handle hover end
-	const handleMouseLeave = () => {
-		if (hoverTimer) {
-			clearTimeout(hoverTimer);
-			hoverTimer = null;
-		}
-		resetVideo();
-	};
+		const handleTouchStart = e => {
+			hasReplayed = false;
 
-	// Store event handlers on the video element so parent can access them
-	video._mediaHandlers = {
-		mouseenter: handleMouseEnter,
-		mouseleave: handleMouseLeave,
-	};
+			// Only set timer if video has ended
+			if (hasEnded) {
+				longPressTimer = setTimeout(() => {
+					// Replay immediately when threshold reached (while finger still down)
+					e.preventDefault();
+					video.currentTime = 0;
+					video.play();
+					hasEnded = false;
+					hasReplayed = true;
+				}, HOLD_THRESHOLD);
+			}
+		};
+
+		const handleTouchEnd = e => {
+			clearLongPressTimer();
+
+			// Prevent navigation if we replayed the video
+			if (hasReplayed) {
+				e.preventDefault();
+			}
+		};
+
+		const handleTouchCancel = () => {
+			clearLongPressTimer();
+		};
+
+		// Store observer and handlers for parent card to use
+		video._mediaHandlers = {
+			touchstart: handleTouchStart,
+			touchend: handleTouchEnd,
+			touchcancel: handleTouchCancel,
+			observer: observer,
+		};
+	} else {
+		// Desktop: Use hover behavior
+		const handleMouseEnter = () => {
+			if (hasPlayed) return;
+
+			hoverTimer = setTimeout(() => {
+				if (!hasPlayed) {
+					video.play();
+					hasPlayed = true;
+				}
+			}, 250);
+		};
+
+		const handleMouseLeave = () => {
+			if (hoverTimer) {
+				clearTimeout(hoverTimer);
+				hoverTimer = null;
+			}
+			resetVideo();
+		};
+
+		video._mediaHandlers = {
+			mouseenter: handleMouseEnter,
+			mouseleave: handleMouseLeave,
+		};
+	}
 
 	return video;
 }
