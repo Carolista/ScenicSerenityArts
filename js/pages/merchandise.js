@@ -35,25 +35,28 @@ export function initMerchandisePage() {
 			'Durable protection for your phone featuring signature watercolor and organic patterns.',
 		cards: [
 			{
-				mediaSrc: 'assets/images/logos/SSA-logo-blue.png',
+				mediaSrc: 'assets/videos/phone-case-magsafe.mp4',
 				imageAlt: 'MagSafe Phone Cases',
 				title: 'MagSafe Phone Cases',
 				subtitle:
 					'Precision-engineered cases with built-in magnets, blending modern tech with organic art.',
+                linkURL: 'https://www.etsy.com/shop/ScenicSerenityArts?ref=dashboard-header&section_id=52385803',
 			},
 			{
-				mediaSrc: 'assets/images/logos/SSA-logo-blue.png',
+				mediaSrc: 'assets/videos/phone-case-snap.mp4',
 				imageAlt: 'Snap Phone Cases',
 				title: 'Snap Phone Cases',
 				subtitle:
 					'Sleek, slim-profile protection for a minimalist look that highlights original artwork.',
+                linkURL: 'https://www.etsy.com/shop/ScenicSerenityArts?ref=dashboard-header&section_id=52373850',
 			},
 			{
-				mediaSrc: 'assets/images/logos/SSA-logo-blue.png',
+				mediaSrc: 'assets/videos/phone-case-tough.mp4',
 				imageAlt: 'Tough Phone Cases',
 				title: 'Tough Phone Cases',
 				subtitle:
 					'Maximum protection with a dual-layer shell featuring vibrant, wrap-around artistic designs.',
+                linkURL: 'https://www.etsy.com/shop/ScenicSerenityArts?ref=dashboard-header&section_id=52373928',
 			},
 		],
 	});
@@ -65,18 +68,20 @@ export function initMerchandisePage() {
 			'Functional designs that turn everyday objects into artistic statements.',
 		cards: [
 			{
-				mediaSrc: 'assets/images/logos/SSA-logo-blue.png',
+				mediaSrc: 'assets/videos/watch-band.mp4',
 				imageAlt: 'Apple Watch Bands',
 				title: 'Apple Watch Bands',
 				subtitle:
 					'High-quality vegan leather bands that turn your wearable tech into a piece of watercolor art.',
+                linkURL: 'https://www.etsy.com/shop/ScenicSerenityArts?ref=dashboard-header&section_id=56477203',
 			},
 			{
-				mediaSrc: 'assets/images/logos/SSA-logo-blue.png',
+				mediaSrc: 'assets/videos/clock.mp4',
 				imageAlt: 'Clocks',
 				title: 'Clocks',
 				subtitle:
 					'Functional wall decor featuring signature abstract patterns for pop of color or shimmery elegance in your home.',
+                linkURL: 'https://www.etsy.com/shop/ScenicSerenityArts?ref=dashboard-header&section_id=56356386',
 			},
 		],
 	});
