@@ -4,7 +4,7 @@
  * Adapts to the layout of its container
  */
 
-import { createMediaElement } from './mediaElement.js';
+import { createMediaElement } from './media-element.js';
 
 /**
  * Create a card element
