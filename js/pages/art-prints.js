@@ -35,7 +35,7 @@ export function initArtPrintsPage() {
 			'Miniature art for collecting or sending, inspired by the beauty of the wilderness.',
 		cards: [
 			{
-				imageSrc: 'assets/images/logos/SSA-logo-blue.png',
+				mediaSrc: 'assets/images/logos/SSA-logo-blue.png',
 				imageAlt: 'Cards',
 				title: 'Cards',
 				subtitle:
@@ -44,7 +44,7 @@ export function initArtPrintsPage() {
 					'https://www.etsy.com/shop/ScenicSerenityArts?ref=dashboard-header&section_id=52438522',
 			},
 			{
-				imageSrc: 'assets/images/logos/SSA-logo-blue.png',
+				mediaSrc: 'assets/images/logos/SSA-logo-blue.png',
 				imageAlt: 'Postcards',
 				title: 'Postcards',
 				subtitle:
@@ -53,14 +53,14 @@ export function initArtPrintsPage() {
 					'https://www.etsy.com/shop/ScenicSerenityArts?ref=dashboard-header&section_id=52399089',
 			},
 			// {
-			// 	imageSrc: 'assets/images/logos/SSA-logo-blue.png',
+			// 	mediaSrc: 'assets/images/logos/SSA-logo-blue.png',
 			// 	imageAlt: 'Art Prints',
 			// 	title: 'Art Prints',
 			// 	subtitle: '(Subtitle)',
 			//  linkURL: '',
 			// },
 			{
-				imageSrc: 'assets/images/logos/SSA-logo-blue.png',
+				mediaSrc: 'assets/images/logos/SSA-logo-blue.png',
 				imageAlt: 'Posters',
 				title: 'Posters',
 				subtitle:
@@ -78,7 +78,7 @@ export function initArtPrintsPage() {
 			'Hardcover spaces for your thoughts, wrapped in organic and mathematical art.',
 		cards: [
 			{
-				imageSrc: 'assets/images/logos/SSA-logo-blue.png',
+				mediaSrc: 'assets/images/logos/SSA-logo-blue.png',
 				imageAlt: 'Notebooks',
 				title: 'Notebooks',
 				subtitle:
@@ -87,7 +87,7 @@ export function initArtPrintsPage() {
 					'https://www.etsy.com/shop/ScenicSerenityArts?ref=dashboard-header&section_id=52384830',
 			},
 			// {
-			// 	imageSrc: 'assets/images/logos/SSA-logo-blue.png',
+			// 	mediaSrc: 'assets/images/logos/SSA-logo-blue.png',
 			// 	imageAlt: 'Journals',
 			// 	title: 'Journals',
 			// 	subtitle: 'Premium bound journals designed to protect your thoughts with a cover of serene, abstract art.',
