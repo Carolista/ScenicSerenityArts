@@ -11,7 +11,7 @@ import { createCardGrid } from '../components/card-grid.js';
 
 export function initHomePage() {
 	// Setup head elements
-	setUpHead({ title: 'Scenic Serenity Arts', includeAnalytics: true });
+	setUpHead({ title: 'Scenic Serenity Arts' });
 
 	// Initialize header
 	initHeader();

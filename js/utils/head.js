@@ -7,15 +7,14 @@
  * Setup common head elements
  * @param {Object} options - Configuration options
  * @param {string} options.title - Page title
- * @param {boolean} [options.includeAnalytics=false] - Whether to include Google Analytics
+ * @param {boolean} [options.includeAnalytics=true] - Whether to include Google Analytics
  */
 export function setUpHead(options = {}) {
-	const { title = 'Scenic Serenity Arts', includeAnalytics = false } =
-		options;
+	const { title = 'Scenic Serenity Arts', includeAnalytics = true } = options;
 
 	const head = document.head;
 
-	// Add Google Analytics if requested (typically for index page)
+	// Add Google Analytics unless not requested
 	if (includeAnalytics) {
 		const gtagScript = document.createElement('script');
 		gtagScript.async = true;
