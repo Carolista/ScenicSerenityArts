@@ -63,7 +63,10 @@ export function createCard(options = {}) {
 				if (media._mediaHandlers.touchstart) {
 					card.addEventListener('touchstart', media._mediaHandlers.touchstart);
 					card.addEventListener('touchend', media._mediaHandlers.touchend);
-					card.addEventListener('touchcancel', media._mediaHandlers.touchcancel);
+					card.addEventListener(
+						'touchcancel',
+						media._mediaHandlers.touchcancel,
+					);
 				}
 
 				// Start Intersection Observer if present

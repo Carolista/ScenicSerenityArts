@@ -116,14 +116,13 @@ h1 {
 	font-family: var(--font-family-scenic);
 	font-size: var(--font-size-xxl);
 	margin-top: var(--spacing-lg);
-	margin-bottom: var(--spacing-md);
+	margin-bottom: var(--spacing-xs);
 	color: var(--color-primary);
 }
 
 h1#ssa-large {
 	font-family: var(--font-family-serenity);
 	font-size: calc(3 * var(--font-size-xl));
-	letter-spacing: -0.3rem;
 	color: var(--color-primary-light);
 }
 
@@ -138,24 +137,54 @@ p {
 	margin-bottom: var(--spacing-sm);
 }
 
-.about-page main p:first-of-type {
+/* About Page Layout */
+.about-page main h1 {
+	margin-bottom: var(--spacing-md);
+}
+
+.about-content-grid {
+	display: grid;
+	grid-template-columns: 2fr 1fr;
+	gap: var(--spacing-lg);
+	align-items: start;
+}
+
+.about-text p:first-of-type {
 	font-weight: bold;
 }
 
-.about-page section {
+.about-sidebar {
+	display: flex;
+	flex-direction: column;
+	gap: var(--spacing-md);
+}
+
+.about-page .code-section {
 	background-color: var(--color-accent-lightest);
 	border-radius: var(--border-radius);
 	padding: var(--spacing-sm);
-	max-width: max-content;
-	margin: var(--spacing-lg) auto;
 }
 
-.about-page section pre {
+.about-page .code-section pre {
 	margin: 10px;
 }
 
-.about-page section code {
+.about-page .code-section code {
 	color: var(--color-accent-medium);
+}
+
+/* Tablet: 50/50 layout */
+@media (max-width: 1024px) {
+	.about-content-grid {
+		grid-template-columns: 1fr 1fr;
+	}
+}
+
+/* Mobile: stacked layout */
+@media (max-width: 768px) {
+	.about-content-grid {
+		grid-template-columns: 1fr;
+	}
 }
 
 /* Product Section Component */
