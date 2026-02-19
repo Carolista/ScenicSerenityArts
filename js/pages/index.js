@@ -19,7 +19,7 @@ export function initHomePage() {
 	const main = document.createElement('main');
 
 	const heading = document.createElement('h1');
-	heading.textContent = 'Scenic Serenity Arts';
+	heading.textContent = 'Welcome';
 	heading.id = 'ssa-large';
 
 	const paragraph = document.createElement('p');
@@ -36,7 +36,7 @@ export function initHomePage() {
 	// Define card data
 	const cardData = [
 		{
-			mediaSrc: 'assets/images/logos/SSA-logo-blue.png',
+			mediaSrc: 'assets/videos/original-works-montage.mp4',
 			imageAlt:
 				'A collection of original watercolor paintings and handmade geometric knitwear',
 			title: 'Original Works',
@@ -45,7 +45,7 @@ export function initHomePage() {
 			linkURL: '../original-works.html',
 		},
 		{
-			mediaSrc: 'assets/images/logos/SSA-logo-blue.png',
+			mediaSrc: 'assets/videos/art-prints-montage.mp4',
 			imageAlt:
 				'Fine art posters and greeting cards featuring stylized mountain and coastal landscapes',
 			title: 'Art Prints & Stationery',
@@ -54,7 +54,7 @@ export function initHomePage() {
 			linkURL: '../art-prints.html',
 		},
 		{
-			mediaSrc: 'assets/images/logos/SSA-logo-blue.png',
+			mediaSrc: 'assets/videos/merchandise-montage.mp4',
 			imageAlt:
 				'Modern lifestyle accessories including MagSafe cases and home decor with abstract art',
 			title: 'Merchandise',

@@ -24,7 +24,7 @@
 
 	/* Typography - Fluid responsive values */
 	--font-family-primary: 'Quicksand', Roboto, sans-serif;
-	--font-family-serenity: 'Marck Script', cursive;
+	--font-family-serenity: 'Cookie', cursive;
 	--font-family-scenic: 'Tenor Sans', sans-serif;
 	--font-size-base: 16px;
 	--font-size-sm: clamp(0.75rem, 1.5vw, 0.875rem);
