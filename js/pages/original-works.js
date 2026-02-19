@@ -3,14 +3,14 @@
  * Handles the content and functionality for the Original Works page
  */
 
-import { setupHead } from '../utils/head.js';
+import { setUpHead } from '../utils/head.js';
 import { initHeader } from '../components/header.js';
 import { initFooter } from '../components/footer.js';
 import { createSection } from '../components/section.js';
 
 export function initOriginalWorksPage() {
 	// Setup head elements
-	setupHead({ title: 'Original Works - Scenic Serenity Arts' });
+	setUpHead({ title: 'Original Works - Scenic Serenity Arts' });
 
 	// Initialize header
 	initHeader();
@@ -28,25 +28,6 @@ export function initOriginalWorksPage() {
 
 	main.appendChild(heading);
 	main.appendChild(paragraph);
-
-	// 3D Shadow Box Paintings Section
-	const shadowBoxSection = createSection({
-		heading: 'Dimensional & Mixed Media',
-		description:
-			'Multi-dimensional landscapes blending the richness of watercolors with intricate paper-crafted layers.',
-		cards: [
-			{
-				mediaSrc: 'assets/videos/shadow-box.mp4',
-				imageAlt:
-					'Hand-painted 3D shadow box showing a layered mountain sunset.',
-				title: '3D Shadow Box Paintings',
-				subtitle:
-					'Hand-cut paper layers and rich watercolors artfully composed in a deep, high-quality frame.',
-				linkURL:
-					'https://www.etsy.com/shop/ScenicSerenityArts?ref=dashboard-header&section_id=52170014',
-			},
-		],
-	});
 
 	// Original Paintings Section
 	const originalPaintingsSection = createSection({
@@ -77,7 +58,7 @@ export function initOriginalWorksPage() {
 				imageAlt: 'Nature Paintings',
 				title: 'Nature Paintings',
 				subtitle:
-					'Atmospheric landscapes of the Smokies and the coast, captured in original watercolor.',
+					'Atmospheric landscapes of the Smokies and the coast, captured with vibrant watercolors.',
 				linkURL:
 					'https://www.etsy.com/shop/ScenicSerenityArts?ref=dashboard-header&section_id=52158821',
 			},
@@ -111,11 +92,30 @@ export function initOriginalWorksPage() {
 		],
 	});
 
+	// 3D Shadow Box Paintings Section
+	const shadowBoxSection = createSection({
+		heading: 'Dimensional Mixed Media',
+		description:
+			'Multi-dimensional landscapes blending the richness of watercolors with intricate paper-crafted layers.',
+		cards: [
+			{
+				mediaSrc: 'assets/videos/shadow-box.mp4',
+				imageAlt:
+					'Hand-painted 3D shadow box showing a layered mountain sunset.',
+				title: '3D Shadow Box Paintings',
+				subtitle:
+					'Hand-cut paper layers and rich watercolors artfully composed in a deep, high-quality frame.',
+				linkURL:
+					'https://www.etsy.com/shop/ScenicSerenityArts?ref=dashboard-header&section_id=52170014',
+			},
+		],
+	});
+
 	// Wearables Section
 	const wearablesSection = createSection({
-		heading: 'Textiles & Fiber Arts',
+		heading: 'Fiber Arts',
 		description:
-			'One-of-a-kind accessories featuring intuitive, freeform geometric patterns.',
+			'One-of-a-kind accessories featuring nature-inspired geometric patterns.',
 		cards: [
 			{
 				mediaSrc: 'assets/videos/fingerless-mitts.mp4',
@@ -131,7 +131,7 @@ export function initOriginalWorksPage() {
 				imageAlt: 'Hats',
 				title: 'Hats',
 				subtitle:
-					'One-of-a-kind headwear crafted with intuitive colorwork and geometric textures.',
+					'One-of-a-kind headwear crafted with complementary colorwork and geometric textures.',
 				linkURL:
 					'https://www.etsy.com/shop/ScenicSerenityArts?ref=dashboard-header&section_id=52158686',
 			},
@@ -140,16 +140,16 @@ export function initOriginalWorksPage() {
 				imageAlt: 'Scarves',
 				title: 'Scarves',
 				subtitle:
-					'Statement-piece neckwear featuring bold chevrons and organic, hand-knitted rhythms.',
+					'Statement-piece neckwear featuring striking patterns and soft, quality materials.',
 				linkURL:
 					'https://www.etsy.com/shop/ScenicSerenityArts?ref=dashboard-header&section_id=52158592',
 			},
 		],
 	});
 
-	main.appendChild(shadowBoxSection);
 	main.appendChild(originalPaintingsSection);
 	main.appendChild(bookmarksSection);
+	main.appendChild(shadowBoxSection);
 	main.appendChild(wearablesSection);
 
 	document.body.appendChild(main);

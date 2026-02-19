@@ -9,7 +9,7 @@
  * @param {string} options.title - Page title
  * @param {boolean} [options.includeAnalytics=false] - Whether to include Google Analytics
  */
-export function setupHead(options = {}) {
+export function setUpHead(options = {}) {
 	const { title = 'Scenic Serenity Arts', includeAnalytics = false } =
 		options;
 

@@ -133,7 +133,7 @@ function appendMobileNav(mobileNav) {
  * @param {HTMLElement} mobileNav - The mobile nav modal element
  * @returns {Function} Cleanup function to remove event listeners
  */
-function setupMobileNavHandlers(header, mobileNav) {
+function setUpMobileNavHandlers(header, mobileNav) {
 	const hamburger = header.querySelector('.hamburger-menu');
 	const closeBtn = mobileNav.querySelector('.mobile-nav-close');
 
@@ -223,7 +223,7 @@ export function initHeader() {
 	const mobileNav = createMobileNav();
 	appendMobileNav(mobileNav);
 
-	const cleanup = setupMobileNavHandlers(header, mobileNav);
+	const cleanup = setUpMobileNavHandlers(header, mobileNav);
 
 	return cleanup;
 }
