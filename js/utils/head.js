@@ -20,7 +20,7 @@ export function setUpHead(options = {}) {
 		const gtagScript = document.createElement('script');
 		gtagScript.async = true;
 		gtagScript.src =
-			'https://www.googletagmanager.com/gtag/js?id=G-YHZKZ8TB6S';
+			'https://www.googletagmanager.com/gtag/js?id=G-D2Y0WLNB10';
 		head.appendChild(gtagScript);
 
 		const gtagConfig = document.createElement('script');
