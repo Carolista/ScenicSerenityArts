@@ -1,16 +1,20 @@
 /**
- * Merchandise Page Module
- * Handles the content and functionality for the Merchandise page
+ * Lifestyle Page Module
+ * Handles the content and functionality for the Lifestyle page
  */
 
 import { setUpHead } from '../utils/head.js';
 import { initHeader } from '../components/header.js';
 import { initFooter } from '../components/footer.js';
 import { createSection } from '../components/section.js';
+import { getPageById } from '../constants/pages.js';
 
-export function initMerchandisePage() {
+export function initLifestylePage() {
+	// Get page metadata
+	const PAGE = getPageById('lifestyle');
+
 	// Setup head elements
-	setUpHead({ title: 'Merchandise - Scenic Serenity Arts' });
+	setUpHead({ title: PAGE.pageTitle });
 
 	// Initialize header
 	initHeader();
@@ -20,11 +24,10 @@ export function initMerchandisePage() {
 	main.id = 'main-content';
 
 	const heading = document.createElement('h1');
-	heading.textContent = 'Merchandise';
+	heading.textContent = PAGE.heading;
 
 	const paragraph = document.createElement('p');
-	paragraph.textContent =
-		'Functional art for everyday life. Modern abstract designs, transformed into lifestyle essentials for your home and tech.';
+	paragraph.textContent = PAGE.description;
 
 	main.appendChild(heading);
 	main.appendChild(paragraph);
@@ -108,9 +111,9 @@ export function initMerchandisePage() {
 
 // Initialize page when DOM is ready
 if (document.readyState === 'loading') {
-	document.addEventListener('DOMContentLoaded', initMerchandisePage, {
+	document.addEventListener('DOMContentLoaded', initLifestylePage, {
 		once: true,
 	});
 } else {
-	initMerchandisePage();
+	initLifestylePage();
 }
