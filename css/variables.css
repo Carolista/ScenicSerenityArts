@@ -1,30 +1,61 @@
 :root {
-  /* Colors */
-  --color-background: #ffffff;
-  --color-text: #333333;
-  --color-primary: #4a90a4;
-  --color-secondary: #7eb09b;
-  --color-accent: #e8c468;
-  
-  /* Spacing */
-  --spacing-xs: 0.5rem;
-  --spacing-sm: 1rem;
-  --spacing-md: 1.5rem;
-  --spacing-lg: 2rem;
-  --spacing-xl: 3rem;
-  
-  /* Typography */
-  --font-family-primary: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
-  --font-size-base: 16px;
-  --font-size-sm: 0.875rem;
-  --font-size-md: 1rem;
-  --font-size-lg: 1.25rem;
-  --font-size-xl: 1.5rem;
-  
-  /* Layout */
-  --max-width: 1200px;
-  --header-height: 80px;
-  
-  /* Border */
-  --border-radius: 4px;
+	/* Colors */
+
+	--color-primary-darkest: #0d1e24;
+	--color-primary-dark: #013547;
+	--color-primary-medium: #0d4f67;
+	--color-primary-light: #016b83;
+	--color-accent-medium: #bc6c25;
+	--color-accent-light: #dda15e;
+	--color-accent-lightest: #fbead2;
+	--color-off-white: #fffefa;
+
+	--color-background: var(--color-off-white);
+	--color-text: var(--color-primary-darkest);
+	--color-primary: var(--color-primary-medium);
+	--color-secondary: var(--color-primary-light);
+
+	/* Spacing - Fluid responsive values */
+	--spacing-xs: clamp(0.25rem, 1vw, 0.5rem);
+	--spacing-sm: clamp(0.5rem, 2vw, 1rem);
+	--spacing-md: clamp(1rem, 3vw, 1.5rem);
+	--spacing-lg: clamp(1.5rem, 4vw, 2rem);
+	--spacing-xl: clamp(2rem, 5vw, 3rem);
+
+	/* Typography - Fluid responsive values */
+	--font-family-primary: 'Quicksand', Roboto, sans-serif;
+	--font-family-serenity: 'Cookie', cursive;
+	--font-family-scenic: 'Tenor Sans', sans-serif;
+	--font-size-base: 16px;
+	--font-size-sm: clamp(0.75rem, 1.5vw, 0.875rem);
+	--font-size-md: clamp(0.875rem, 2vw, 1rem);
+	--font-size-lg: clamp(1rem, 2.5vw, 1.25rem);
+	--font-size-xl: clamp(1.25rem, 3vw, 1.5rem);
+	--font-size-xxl: clamp(1.5rem, 3.5vw, 1.75rem);
+
+	/* Layout */
+	--max-width: 1200px;
+	--logo-height-base: clamp(48px, 10vw, 72px);
+	--logo-height: calc(var(--logo-height-base) * 2);
+	--header-padding-vertical: var(--spacing-sm);
+	--header-height: calc(
+		var(--logo-height-base) + (var(--header-padding-vertical) * 2)
+	);
+
+	/* Breakpoints */
+	--breakpoint-mobile: 768px;
+	--breakpoint-tablet: 1024px;
+
+	/* Border */
+	--border-radius: 4px;
+	--border-radius-lg: 8px;
+	--border-color-soft: #d0d0d0;
+
+	/* Card */
+	--card-text-padding: var(--spacing-sm);
+	--card-title-size: var(--font-size-lg);
+	--card-subtitle-size: clamp(0.875rem, 4vw, 1rem);
+	--card-image-border-radius: var(--border-radius);
+	--card-border-width: 1px;
+	--card-shadow-hover: 4px 4px 8px rgba(0, 0, 0, 0.15);
 }
