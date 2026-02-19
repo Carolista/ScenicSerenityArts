@@ -128,7 +128,63 @@ export function initHeader() {
 
 	// Connect hamburger to mobile nav
 	const hamburger = header.querySelector('.hamburger-menu');
-	hamburger.addEventListener('click', () => {
+	const closeBtn = mobileNav.querySelector('.mobile-nav-close');
+
+	// Function to open mobile nav
+	function openMobileNav() {
 		mobileNav.classList.add('active');
+		// Focus the close button when modal opens
+		closeBtn.focus();
+		// Trap focus within modal
+		document.addEventListener('keydown', handleKeyDown);
+	}
+
+	// Function to close mobile nav
+	function closeMobileNav() {
+		mobileNav.classList.remove('active');
+		// Return focus to hamburger button
+		hamburger.focus();
+		// Remove focus trap
+		document.removeEventListener('keydown', handleKeyDown);
+	}
+
+	// Handle keyboard navigation in modal
+	function handleKeyDown(e) {
+		// Close on Escape key
+		if (e.key === 'Escape') {
+			closeMobileNav();
+			return;
+		}
+
+		// Focus trap: cycle focus within modal
+		if (e.key === 'Tab') {
+			const focusableElements =
+				mobileNav.querySelectorAll('button, a[href]');
+			const firstElement = focusableElements[0];
+			const lastElement = focusableElements[focusableElements.length - 1];
+
+			// If shift+tab on first element, go to last
+			if (e.shiftKey && document.activeElement === firstElement) {
+				e.preventDefault();
+				lastElement.focus();
+			}
+			// If tab on last element, go to first
+			else if (!e.shiftKey && document.activeElement === lastElement) {
+				e.preventDefault();
+				firstElement.focus();
+			}
+		}
+	}
+
+	// Open modal on hamburger click
+	hamburger.addEventListener('click', openMobileNav);
+
+	// Close modal on close button click
+	closeBtn.addEventListener('click', closeMobileNav);
+
+	// Close modal on link click (navigate to new page)
+	const mobileNavLinks = mobileNav.querySelectorAll('a');
+	mobileNavLinks.forEach(link => {
+		link.addEventListener('click', closeMobileNav);
 	});
 }
