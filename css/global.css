@@ -199,7 +199,7 @@ footer {
 }
 
 .icon-link:hover {
-	color: var(--color-primary-light);
+	color: var(--color-accent-light);
 	transform: scale(1.1);
 }
 
