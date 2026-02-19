@@ -3,20 +3,22 @@
  * Handles the content and functionality for the home/index page
  */
 
-import { setupHead } from '../utils/head.js';
+import { setUpHead } from '../utils/head.js';
 import { initHeader } from '../components/header.js';
 import { initFooter } from '../components/footer.js';
 import { createCard } from '../components/card.js';
+import { createCardGrid } from '../components/card-grid.js';
 
 export function initHomePage() {
 	// Setup head elements
-	setupHead({ title: 'Scenic Serenity Arts', includeAnalytics: true });
+	setUpHead({ title: 'Scenic Serenity Arts', includeAnalytics: true });
 
 	// Initialize header
 	initHeader();
 
 	// Create main content
 	const main = document.createElement('main');
+	main.id = 'main-content';
 
 	const heading = document.createElement('h1');
 	heading.textContent = 'Welcome';
@@ -24,53 +26,45 @@ export function initHomePage() {
 
 	const paragraph = document.createElement('p');
 	paragraph.textContent =
-		'Where art illuminates the analytical and geology intersects with geometry. Explore a collection of intuitive art, fiber goods, and functional decor inspired by the organic rhythms of the Great Smoky Mountains and the Florida coast.';
+		'Scenic Serenity Arts — Where art illuminates the analytical,  and geology intersects with geometry. Explore a collection of intuitive art, fiber goods, and functional decor inspired by the organic rhythms of the Great Smoky Mountains and the Florida coast.';
 
 	main.appendChild(heading);
 	main.appendChild(paragraph);
-
-	// Create card grid
-	const cardGrid = document.createElement('div');
-	cardGrid.className = 'card-grid';
 
 	// Define card data
 	const cardData = [
 		{
 			mediaSrc: 'assets/videos/original-works-montage.mp4',
 			imageAlt:
-				'A collection of original watercolor paintings and handmade geometric knitwear',
+				'Video montage of an original painting, a one-of-a-kind knit scarf, a hand-painted bookmark, and a set of 2 shadow box paintings',
 			title: 'Original Works',
 			subtitle:
-				'One-of-a-kind paintings, 3D shadow boxes, and wearable fiber arts defined by organic fractals.',
+				'Unique paintings, hand-painted bookmarks, 3D shadow boxes, and one-of-a-kind, wearable fiber arts.',
 			linkURL: '../original-works.html',
 		},
 		{
 			mediaSrc: 'assets/videos/art-prints-montage.mp4',
 			imageAlt:
-				'Fine art posters and greeting cards featuring stylized mountain and coastal landscapes',
+				'Video montage featuring a notebook, poster, and postcard from the collection of paper goods and prints',
 			title: 'Art Prints & Stationery',
 			subtitle:
-				'Archival gallery prints and nature-inspired paper goods capturing the serenity of land and sea.',
+				'Fine art prints, posters, and inspired paper goods capturing the serenity of land and sea.',
 			linkURL: '../art-prints.html',
 		},
 		{
 			mediaSrc: 'assets/videos/merchandise-montage.mp4',
 			imageAlt:
-				'Modern lifestyle accessories including MagSafe cases and home decor with abstract art',
+				'Montage of a cell phone case, wall clock, and Apple watch band',
 			title: 'Merchandise',
 			subtitle:
-				'Functional art for your daily adventures. Elevate your tech and home with signature geometric patterns.',
+				'Functional art for your daily adventures. Elevate your tech and home with vibrant abstract patterns.',
 			linkURL: '../merchandise.html',
 		},
 	];
 
-	// Create cards
-	cardData.forEach(data => {
-		const card = createCard(data);
-		if (card) {
-			cardGrid.appendChild(card);
-		}
-	});
+	// Create cards and card grid
+	const cards = cardData.map(data => createCard(data));
+	const cardGrid = createCardGrid(cards);
 
 	main.appendChild(cardGrid);
 

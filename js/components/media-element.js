@@ -6,12 +6,31 @@
  * - Mobile: auto-play on scroll (50% visibility), press-and-hold to replay
  */
 
+// Video interaction configuration constants
+const VIDEO_CONFIG = {
+	INTERSECTION_THRESHOLD: 0.5, // 50% visibility required to trigger playback
+	LONG_PRESS_DURATION: 500, // milliseconds to hold before replay triggers
+	HOVER_DELAY: 250, // milliseconds delay before hover playback
+};
+
+// Store media element handlers using WeakMap to avoid polluting DOM elements
+const mediaHandlers = new WeakMap();
+
+/**
+ * Get event handlers for a media element
+ * @param {HTMLElement} element - The media element
+ * @returns {Object|null} The handlers object or null if none exist
+ */
+export function getMediaHandlers(element) {
+	return mediaHandlers.get(element) || null;
+}
+
 /**
  * Create a media element (image or video)
  * @param {Object} options - Media configuration options
  * @param {string} options.mediaSrc - URL of the media file
  * @param {string} [options.alt] - Alt text for accessibility
- * @returns {HTMLElement} The image or video element
+ * @returns {HTMLImageElement|HTMLVideoElement} The image or video element
  */
 export function createMediaElement(options = {}) {
 	const { mediaSrc, alt = '' } = options;
@@ -102,7 +121,7 @@ function createVideoElement(src, alt) {
 					}
 				});
 			},
-			{ threshold: 0.5 }, // 50% visibility
+			{ threshold: VIDEO_CONFIG.INTERSECTION_THRESHOLD }
 		);
 
 		// Track when video ends
@@ -113,7 +132,7 @@ function createVideoElement(src, alt) {
 		// Press-and-hold to replay (triggers after 500ms while still pressing)
 		let longPressTimer = null;
 		let hasReplayed = false;
-		const HOLD_THRESHOLD = 500; // milliseconds
+		const HOLD_THRESHOLD = VIDEO_CONFIG.LONG_PRESS_DURATION;
 
 		const clearLongPressTimer = () => {
 			if (longPressTimer) {
@@ -152,12 +171,12 @@ function createVideoElement(src, alt) {
 		};
 
 		// Store observer and handlers for parent card to use
-		video._mediaHandlers = {
+		mediaHandlers.set(video, {
 			touchstart: handleTouchStart,
 			touchend: handleTouchEnd,
 			touchcancel: handleTouchCancel,
-			observer: observer,
-		};
+			observer,
+		});
 	} else {
 		// Desktop: Use hover behavior
 		const handleMouseEnter = () => {
@@ -168,7 +187,7 @@ function createVideoElement(src, alt) {
 					video.play();
 					hasPlayed = true;
 				}
-			}, 250);
+			}, VIDEO_CONFIG.HOVER_DELAY);
 		};
 
 		const handleMouseLeave = () => {
@@ -179,10 +198,10 @@ function createVideoElement(src, alt) {
 			resetVideo();
 		};
 
-		video._mediaHandlers = {
+		mediaHandlers.set(video, {
 			mouseenter: handleMouseEnter,
 			mouseleave: handleMouseLeave,
-		};
+		});
 	}
 
 	return video;

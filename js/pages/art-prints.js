@@ -3,27 +3,28 @@
  * Handles the content and functionality for the Art Prints page
  */
 
-import { setupHead } from '../utils/head.js';
+import { setUpHead } from '../utils/head.js';
 import { initHeader } from '../components/header.js';
 import { initFooter } from '../components/footer.js';
 import { createSection } from '../components/section.js';
 
 export function initArtPrintsPage() {
 	// Setup head elements
-	setupHead({ title: 'Art Prints - Scenic Serenity Arts' });
+	setUpHead({ title: 'Art Prints - Scenic Serenity Arts' });
 
 	// Initialize header
 	initHeader();
 
 	// Create main content
 	const main = document.createElement('main');
+	main.id = 'main-content';
 
 	const heading = document.createElement('h1');
 	heading.textContent = 'Art Prints & Stationery';
 
 	const paragraph = document.createElement('p');
 	paragraph.textContent =
-		'Bring the spirit of the mountains and the sea into your space. High-quality archival reproductions and paper goods designed for collectors and correspondents alike.';
+		'Bring colorful abstract compositions and nature-inspired landscapes into your space with high-quality reproductions and paper goods designed for collectors and correspondents alike.';
 
 	main.appendChild(heading);
 	main.appendChild(paragraph);
@@ -32,14 +33,14 @@ export function initArtPrintsPage() {
 	const paperGoodsSection = createSection({
 		heading: 'Paper Goods',
 		description:
-			'Miniature art for collecting or sending, inspired by the beauty of the wilderness.',
+			'Inspire yourself and others with vibrant art reproductions designed for collecting or sharing.',
 		cards: [
 			{
 				mediaSrc: 'assets/videos/notecard.mp4',
 				imageAlt: 'Notecards',
 				title: 'Notecards',
 				subtitle:
-					'Artistic notecards for every occasion, featuring original art inspired by the beauty of the natural world.',
+					'Artistic notecards for every occasion, featuring original abstract art and natural patterns.',
 				linkURL:
 					'https://www.etsy.com/shop/ScenicSerenityArts?ref=dashboard-header&section_id=52438522',
 			},
@@ -75,14 +76,14 @@ export function initArtPrintsPage() {
 	const writingSection = createSection({
 		heading: 'Writing & Reflection',
 		description:
-			'Hardcover spaces for your thoughts, wrapped in organic and mathematical art.',
+			'Dedicated spaces for your thoughts, enclosed by organic and mathematical art.',
 		cards: [
 			{
 				mediaSrc: 'assets/videos/notebook.mp4',
 				imageAlt: 'Notebooks',
 				title: 'Notebooks',
 				subtitle:
-					'Hardcover spiral notebooks featuring original art—perfect for your daily logs and ruminations.',
+					'Spiral notebooks featuring original art—perfect for your daily logs and ruminations.',
 				linkURL:
 					'https://www.etsy.com/shop/ScenicSerenityArts?ref=dashboard-header&section_id=52384830',
 			},

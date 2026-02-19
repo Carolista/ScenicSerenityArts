@@ -3,27 +3,28 @@
  * Handles the content and functionality for the Merchandise page
  */
 
-import { setupHead } from '../utils/head.js';
+import { setUpHead } from '../utils/head.js';
 import { initHeader } from '../components/header.js';
 import { initFooter } from '../components/footer.js';
 import { createSection } from '../components/section.js';
 
 export function initMerchandisePage() {
 	// Setup head elements
-	setupHead({ title: 'Merchandise - Scenic Serenity Arts' });
+	setUpHead({ title: 'Merchandise - Scenic Serenity Arts' });
 
 	// Initialize header
 	initHeader();
 
 	// Create main content
 	const main = document.createElement('main');
+	main.id = 'main-content';
 
 	const heading = document.createElement('h1');
 	heading.textContent = 'Merchandise';
 
 	const paragraph = document.createElement('p');
 	paragraph.textContent =
-		'Functional art for everyday life. Signature patterns and modern geometric designs transformed into lifestyle essentials for your home and tech.';
+		'Functional art for everyday life. Modern abstract designs, transformed into lifestyle essentials for your home and tech.';
 
 	main.appendChild(heading);
 	main.appendChild(paragraph);
@@ -40,15 +41,17 @@ export function initMerchandisePage() {
 				title: 'MagSafe Phone Cases',
 				subtitle:
 					'Precision-engineered cases with built-in magnets, blending modern tech with organic art.',
-                linkURL: 'https://www.etsy.com/shop/ScenicSerenityArts?ref=dashboard-header&section_id=52385803',
+				linkURL:
+					'https://www.etsy.com/shop/ScenicSerenityArts?ref=dashboard-header&section_id=52385803',
 			},
 			{
 				mediaSrc: 'assets/videos/phone-case-snap.mp4',
 				imageAlt: 'Snap Phone Cases',
 				title: 'Snap Phone Cases',
 				subtitle:
-					'Sleek, slim-profile protection for a minimalist look that highlights original artwork.',
-                linkURL: 'https://www.etsy.com/shop/ScenicSerenityArts?ref=dashboard-header&section_id=52373850',
+					'Sleek, slim-profile protection for with original artwork that catches the eye.',
+				linkURL:
+					'https://www.etsy.com/shop/ScenicSerenityArts?ref=dashboard-header&section_id=52373850',
 			},
 			{
 				mediaSrc: 'assets/videos/phone-case-tough.mp4',
@@ -56,7 +59,8 @@ export function initMerchandisePage() {
 				title: 'Tough Phone Cases',
 				subtitle:
 					'Maximum protection with a dual-layer shell featuring vibrant, wrap-around artistic designs.',
-                linkURL: 'https://www.etsy.com/shop/ScenicSerenityArts?ref=dashboard-header&section_id=52373928',
+				linkURL:
+					'https://www.etsy.com/shop/ScenicSerenityArts?ref=dashboard-header&section_id=52373928',
 			},
 		],
 	});
@@ -72,16 +76,18 @@ export function initMerchandisePage() {
 				imageAlt: 'Apple Watch Bands',
 				title: 'Apple Watch Bands',
 				subtitle:
-					'High-quality vegan leather bands that turn your wearable tech into a piece of watercolor art.',
-                linkURL: 'https://www.etsy.com/shop/ScenicSerenityArts?ref=dashboard-header&section_id=56477203',
+					'High-quality vegan leather bands that turn your wearable tech into a portable work of art.',
+				linkURL:
+					'https://www.etsy.com/shop/ScenicSerenityArts?ref=dashboard-header&section_id=56477203',
 			},
 			{
 				mediaSrc: 'assets/videos/clock.mp4',
 				imageAlt: 'Clocks',
 				title: 'Clocks',
 				subtitle:
-					'Functional wall decor featuring signature abstract patterns for pop of color or shimmery elegance in your home.',
-                linkURL: 'https://www.etsy.com/shop/ScenicSerenityArts?ref=dashboard-header&section_id=56356386',
+					'Functional wall decor featuring signature abstract patterns for a pop of color in your home.',
+				linkURL:
+					'https://www.etsy.com/shop/ScenicSerenityArts?ref=dashboard-header&section_id=56356386',
 			},
 		],
 	});
