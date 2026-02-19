@@ -8,6 +8,7 @@ export default [
 				document: 'readonly',
 				console: 'readonly',
 				navigator: 'readonly',
+				HTMLElement: 'readonly',
 				IntersectionObserver: 'readonly',
 				setTimeout: 'readonly',
 				clearTimeout: 'readonly',
