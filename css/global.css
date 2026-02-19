@@ -40,6 +40,23 @@ body::before {
 	z-index: -1;
 }
 
+/* Skip Link for Accessibility */
+.skip-link {
+	position: fixed;
+	top: -100px;
+	left: 0;
+	background-color: var(--color-primary-dark);
+	color: var(--color-off-white);
+	padding: var(--spacing-sm);
+	text-decoration: none;
+	z-index: 1000;
+	border-radius: 0 0 var(--border-radius) 0;
+}
+
+.skip-link:focus {
+	top: 0;
+}
+
 /* Header Styles */
 header {
 	display: flex;

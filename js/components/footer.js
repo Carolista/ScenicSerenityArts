@@ -20,19 +20,19 @@ export function createFooter() {
 	const facebookLink = createIconLink({
 		iconClass: 'fa-brands fa-facebook-f',
 		url: 'https://www.facebook.com/ScenicSerenityArts/',
-		tooltip: 'Facebook',
+		tooltip: 'Go to Facebook Page',
 	});
 
 	const instagramLink = createIconLink({
 		iconClass: 'fa-brands fa-instagram',
 		url: 'https://www.instagram.com/scenicserenityarts/',
-		tooltip: 'Instagram',
+		tooltip: 'Go to Instagram Page',
 	});
 
 	const etsyLink = createIconLink({
 		iconClass: 'fa-brands fa-etsy',
 		url: 'https://www.scenicserenityarts.etsy.com',
-		tooltip: 'Etsy',
+		tooltip: 'Go to Etsy Shop',
 	});
 
 	socialIcons.appendChild(facebookLink);

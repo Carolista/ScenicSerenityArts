@@ -17,6 +17,7 @@ export function initHomePage() {
 
 	// Create main content
 	const main = document.createElement('main');
+	main.id = 'main-content';
 
 	const heading = document.createElement('h1');
 	heading.textContent = 'Welcome';

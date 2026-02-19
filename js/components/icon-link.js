@@ -26,6 +26,7 @@ export function createIconLink(options = {}) {
 
 	if (tooltip) {
 		link.title = tooltip;
+		link.setAttribute('aria-label', tooltip);
 	}
 
 	const icon = document.createElement('i');

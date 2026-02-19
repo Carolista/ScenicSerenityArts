@@ -56,6 +56,13 @@ function createMobileNav() {
 export function createHeader() {
 	const header = document.createElement('header');
 
+	// Create skip link for accessibility
+	const skipLink = document.createElement('a');
+	skipLink.href = '#main-content';
+	skipLink.className = 'skip-link';
+	skipLink.textContent = 'Skip to main content';
+	header.appendChild(skipLink);
+
 	// Create logo link
 	const logoLink = document.createElement('a');
 	logoLink.href = 'index.html';
