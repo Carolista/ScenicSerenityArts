@@ -13,6 +13,7 @@ import { createMediaElement, getMediaHandlers } from './media-element.js';
  * @param {string} [options.imageAlt] - Alt text for the media
  * @param {string} [options.title] - Card title text
  * @param {string} [options.subtitle] - Card subtitle text
+ * @param {string} [options.buttonText] - Text for decorative button
  * @param {string} [options.className] - Additional CSS class for the card
  * @param {string} [options.linkURL] - URL to link the card to
  * @returns {HTMLElement|HTMLAnchorElement} The card element (wrapped in link if linkURL provided)
@@ -23,6 +24,7 @@ export function createCard(options = {}) {
 		imageAlt = '',
 		title,
 		subtitle,
+		buttonText = '',
 		className = '',
 		linkURL = '',
 	} = options;
@@ -31,6 +33,7 @@ export function createCard(options = {}) {
 	const hasMedia = mediaSrc && mediaSrc.trim() !== '';
 	const hasTitle = title && title.trim() !== '';
 	const hasSubtitle = subtitle && subtitle.trim() !== '';
+	const hasButtonText = buttonText && buttonText.trim() !== '';
 	const hasLinkURL = linkURL && linkURL.trim() !== '';
 
 	if (!hasMedia && !hasTitle && !hasSubtitle) {
@@ -92,6 +95,13 @@ export function createCard(options = {}) {
 			subtitleElement.className = 'card-subtitle';
 			subtitleElement.textContent = subtitle;
 			content.appendChild(subtitleElement);
+		}
+
+		if (hasButtonText) {
+			const button = document.createElement('span');
+			button.className = 'card-button';
+			button.textContent = buttonText;
+			content.appendChild(button);
 		}
 
 		card.appendChild(content);

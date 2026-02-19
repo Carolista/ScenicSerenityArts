@@ -40,6 +40,7 @@ export function initHomePage() {
 			title: 'Original Works',
 			subtitle:
 				'Unique paintings, hand-painted bookmarks, 3D shadow boxes, and one-of-a-kind, wearable fiber arts.',
+			buttonText: 'Learn More',
 			linkURL: '../original-works.html',
 		},
 		{
@@ -49,6 +50,7 @@ export function initHomePage() {
 			title: 'Art Prints & Stationery',
 			subtitle:
 				'Fine art prints, posters, and inspired paper goods capturing the serenity of land and sea.',
+			buttonText: 'Learn More',
 			linkURL: '../art-prints.html',
 		},
 		{
@@ -58,6 +60,7 @@ export function initHomePage() {
 			title: 'Merchandise',
 			subtitle:
 				'Functional art for your daily adventures. Elevate your tech and home with vibrant abstract patterns.',
+			buttonText: 'Learn More',
 			linkURL: '../merchandise.html',
 		},
 	];

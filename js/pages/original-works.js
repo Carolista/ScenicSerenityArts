@@ -41,6 +41,7 @@ export function initOriginalWorksPage() {
 				title: 'Abstract Paintings',
 				subtitle:
 					'One-of-a-kind studies of fluid dynamics, metallic fractals, and intuitive color blooms.',
+				buttonText: 'Shop Now',
 				linkURL:
 					'https://www.etsy.com/shop/ScenicSerenityArts?ref=dashboard-header&section_id=52360344',
 			},
@@ -50,6 +51,7 @@ export function initOriginalWorksPage() {
 				title: 'Graphic Art',
 				subtitle:
 					'Bold, structured compositions where geometry meets hand-drawn precision and celebrates nature.',
+				buttonText: 'Shop Now',
 				linkURL:
 					'https://www.etsy.com/shop/ScenicSerenityArts?ref=dashboard-header&section_id=52372347',
 			},
@@ -59,6 +61,7 @@ export function initOriginalWorksPage() {
 				title: 'Nature Paintings',
 				subtitle:
 					'Atmospheric landscapes of the Smokies and the coast, captured with vibrant watercolors.',
+				buttonText: 'Shop Now',
 				linkURL:
 					'https://www.etsy.com/shop/ScenicSerenityArts?ref=dashboard-header&section_id=52158821',
 			},
@@ -77,6 +80,7 @@ export function initOriginalWorksPage() {
 				title: 'Abstract Bookmarks',
 				subtitle:
 					'Functional fine art featuring unique watercolor fractals and shimmering metallic details.',
+				buttonText: 'Shop Now',
 				linkURL:
 					'https://www.etsy.com/shop/ScenicSerenityArts?ref=dashboard-header&section_id=52182819',
 			},
@@ -86,6 +90,7 @@ export function initOriginalWorksPage() {
 				title: 'Nature Bookmarks',
 				subtitle:
 					'Hand-painted mountain and coastal scenes in a collectible, miniature format.',
+				buttonText: 'Shop Now',
 				linkURL:
 					'https://www.etsy.com/shop/ScenicSerenityArts?ref=dashboard-header&section_id=57326833',
 			},
@@ -105,6 +110,7 @@ export function initOriginalWorksPage() {
 				title: '3D Shadow Box Paintings',
 				subtitle:
 					'Hand-cut paper layers and rich watercolors artfully composed in a deep, high-quality frame.',
+				buttonText: 'Shop Now',
 				linkURL:
 					'https://www.etsy.com/shop/ScenicSerenityArts?ref=dashboard-header&section_id=52170014',
 			},
@@ -123,6 +129,7 @@ export function initOriginalWorksPage() {
 				title: 'Fingerless Mitts',
 				subtitle:
 					'Colorful, hand-knitted warmth for the wrists and hands—no two pairs are alike.',
+				buttonText: 'Shop Now',
 				linkURL:
 					'https://www.etsy.com/shop/ScenicSerenityArts?ref=dashboard-header&section_id=52182559',
 			},
@@ -132,6 +139,7 @@ export function initOriginalWorksPage() {
 				title: 'Hats',
 				subtitle:
 					'One-of-a-kind headwear crafted with complementary colorwork and geometric textures.',
+				buttonText: 'Shop Now',
 				linkURL:
 					'https://www.etsy.com/shop/ScenicSerenityArts?ref=dashboard-header&section_id=52158686',
 			},
@@ -141,6 +149,7 @@ export function initOriginalWorksPage() {
 				title: 'Scarves',
 				subtitle:
 					'Statement-piece neckwear featuring striking patterns and soft, quality materials.',
+				buttonText: 'Shop Now',
 				linkURL:
 					'https://www.etsy.com/shop/ScenicSerenityArts?ref=dashboard-header&section_id=52158592',
 			},

@@ -41,6 +41,7 @@ export function initArtPrintsPage() {
 				title: 'Notecards',
 				subtitle:
 					'Artistic notecards for every occasion, featuring original abstract art and natural patterns.',
+				buttonText: 'Shop Now',
 				linkURL:
 					'https://www.etsy.com/shop/ScenicSerenityArts?ref=dashboard-header&section_id=52438522',
 			},
@@ -50,6 +51,7 @@ export function initArtPrintsPage() {
 				title: 'Postcards',
 				subtitle:
 					'Small-scale prints based on original art. (Note: Currently exclusive to UK shipping.)',
+				buttonText: 'Shop Now',
 				linkURL:
 					'https://www.etsy.com/shop/ScenicSerenityArts?ref=dashboard-header&section_id=52399089',
 			},
@@ -58,6 +60,7 @@ export function initArtPrintsPage() {
 			// 	imageAlt: 'Art Prints',
 			// 	title: 'Art Prints',
 			// 	subtitle: '(Subtitle)',
+			//  buttonText: 'Shop Now',
 			//  linkURL: '',
 			// },
 			{
@@ -66,6 +69,7 @@ export function initArtPrintsPage() {
 				title: 'Posters',
 				subtitle:
 					'High-quality reproductions of my most popular abstract watercolor paintings.',
+				buttonText: 'Shop Now',
 				linkURL:
 					'https://www.etsy.com/shop/ScenicSerenityArts?ref=dashboard-header&section_id=52461235',
 			},
@@ -84,6 +88,7 @@ export function initArtPrintsPage() {
 				title: 'Notebooks',
 				subtitle:
 					'Spiral notebooks featuring original art—perfect for your daily logs and ruminations.',
+				buttonText: 'Shop Now',
 				linkURL:
 					'https://www.etsy.com/shop/ScenicSerenityArts?ref=dashboard-header&section_id=52384830',
 			},
@@ -92,6 +97,7 @@ export function initArtPrintsPage() {
 			// 	imageAlt: 'Journals',
 			// 	title: 'Journals',
 			// 	subtitle: 'Premium bound journals designed to protect your thoughts with a cover of serene, abstract art.',
+			//  buttonText: 'Shop Now',
 			//     linkURL: '',
 			// },
 		],
