@@ -3,6 +3,14 @@
  * Creates a reusable header with logo placeholder and navigation menu
  */
 
+// Navigation items shared between desktop and mobile menus
+const NAV_ITEMS = [
+	{ text: 'About the Artist', href: 'about.html' },
+	{ text: 'Original Works', href: 'original-works.html' },
+	{ text: 'Art Prints & Stationery', href: 'art-prints.html' },
+	{ text: 'Merchandise', href: 'merchandise.html' },
+];
+
 /**
  * Create mobile navigation modal
  * @returns {HTMLElement} The mobile nav modal element
@@ -10,6 +18,9 @@
 function createMobileNav() {
 	const modal = document.createElement('div');
 	modal.className = 'mobile-nav-modal';
+	modal.setAttribute('role', 'dialog');
+	modal.setAttribute('aria-modal', 'true');
+	modal.setAttribute('aria-label', 'Navigation menu');
 
 	// Close button
 	const closeBtn = document.createElement('button');
@@ -19,14 +30,8 @@ function createMobileNav() {
 
 	// Navigation items
 	const ul = document.createElement('ul');
-	const navItems = [
-		{ text: 'About', href: 'about.html' },
-		{ text: 'Original Works', href: 'original-works.html' },
-		{ text: 'Art Prints', href: 'art-prints.html' },
-		{ text: 'Merchandise', href: 'merchandise.html' },
-	];
 
-	navItems.forEach(item => {
+	NAV_ITEMS.forEach(item => {
 		const li = document.createElement('li');
 		const a = document.createElement('a');
 		a.href = item.href;
@@ -53,6 +58,10 @@ function createMobileNav() {
 	return modal;
 }
 
+/**
+ * Create header element
+ * @returns {HTMLElement} The header element
+ */
 export function createHeader() {
 	const header = document.createElement('header');
 
@@ -78,14 +87,7 @@ export function createHeader() {
 	const nav = document.createElement('nav');
 	const ul = document.createElement('ul');
 
-	const navItems = [
-		{ text: 'About the Artist', href: 'about.html' },
-		{ text: 'Original Works', href: 'original-works.html' },
-		{ text: 'Art Prints & Stationery', href: 'art-prints.html' },
-		{ text: 'Merchandise', href: 'merchandise.html' },
-	];
-
-	navItems.forEach(item => {
+	NAV_ITEMS.forEach(item => {
 		const li = document.createElement('li');
 		const a = document.createElement('a');
 		a.href = item.href;
@@ -110,23 +112,28 @@ export function createHeader() {
 }
 
 /**
- * Initialize header on page load
- * Adds the header to the body as the first element
+ * Append header to the document body
+ * @param {HTMLElement} header - The header element to append
  */
-export function initHeader() {
-	// Prevent duplicate headers
-	if (document.querySelector('header')) {
-		return;
-	}
-
-	const header = createHeader();
+function appendHeader(header) {
 	document.body.prepend(header);
+}
 
-	// Add mobile nav modal
-	const mobileNav = createMobileNav();
+/**
+ * Append mobile navigation modal to the document body
+ * @param {HTMLElement} mobileNav - The mobile nav element to append
+ */
+function appendMobileNav(mobileNav) {
 	document.body.appendChild(mobileNav);
+}
 
-	// Connect hamburger to mobile nav
+/**
+ * Setup event handlers for mobile navigation
+ * @param {HTMLElement} header - The header element
+ * @param {HTMLElement} mobileNav - The mobile nav modal element
+ * @returns {Function} Cleanup function to remove event listeners
+ */
+function setupMobileNavHandlers(header, mobileNav) {
 	const hamburger = header.querySelector('.hamburger-menu');
 	const closeBtn = mobileNav.querySelector('.mobile-nav-close');
 
@@ -187,4 +194,36 @@ export function initHeader() {
 	mobileNavLinks.forEach(link => {
 		link.addEventListener('click', closeMobileNav);
 	});
+
+	// Return cleanup function
+	return function cleanup() {
+		hamburger.removeEventListener('click', openMobileNav);
+		closeBtn.removeEventListener('click', closeMobileNav);
+		document.removeEventListener('keydown', handleKeyDown);
+		mobileNavLinks.forEach(link => {
+			link.removeEventListener('click', closeMobileNav);
+		});
+	};
+}
+
+/**
+ * Initialize header and mobile navigation
+ * Creates header and mobile nav, appends them to DOM, and sets up event handlers
+ * @returns {Function|null} Cleanup function to remove event listeners, or null if header already exists
+ */
+export function initHeader() {
+	// Prevent duplicate headers
+	if (document.querySelector('header')) {
+		return null;
+	}
+
+	const header = createHeader();
+	appendHeader(header);
+
+	const mobileNav = createMobileNav();
+	appendMobileNav(mobileNav);
+
+	const cleanup = setupMobileNavHandlers(header, mobileNav);
+
+	return cleanup;
 }

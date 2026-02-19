@@ -15,9 +15,6 @@ export function setupHead(options = {}) {
 
 	const head = document.head;
 
-	// Set title
-	document.title = title;
-
 	// Add Google Analytics if requested (typically for index page)
 	if (includeAnalytics) {
 		const gtagScript = document.createElement('script');
@@ -93,4 +90,7 @@ export function setupHead(options = {}) {
 	globalCSS.rel = 'stylesheet';
 	globalCSS.href = 'css/global.css';
 	head.appendChild(globalCSS);
+
+	// Set page title last (after all other head elements)
+	document.title = title;
 }

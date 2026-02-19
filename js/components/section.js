@@ -4,17 +4,25 @@
  */
 
 import { createCard } from './card.js';
+import { createCardGrid } from './card-grid.js';
 
 /**
  * Create a section element with heading, description, and cards
  * @param {Object} options - Section configuration options
  * @param {string} options.heading - Section heading text
  * @param {string} [options.description] - Optional description paragraph
- * @param {Array} options.cards - Array of card data objects
+ * @param {Array<{mediaSrc?: string, imageAlt?: string, title?: string, subtitle?: string, className?: string, linkURL?: string}>} options.cards - Array of card configuration objects
  * @returns {HTMLElement} The section element
  */
 export function createSection(options = {}) {
 	const { heading, description, cards = [] } = options;
+
+	// Validate that section has content
+	if (!heading && !description && cards.length === 0) {
+		throw new Error(
+			'Section requires at least heading, description, or cards'
+		);
+	}
 
 	// Create section container
 	const section = document.createElement('section');
@@ -37,17 +45,21 @@ export function createSection(options = {}) {
 
 	// Create card grid if cards provided
 	if (cards.length > 0) {
-		const cardGrid = document.createElement('div');
-		cardGrid.className = 'card-grid';
+		const cardElements = cards
+			.map(cardData => {
+				try {
+					return createCard(cardData);
+				} catch (error) {
+					console.error('Error creating card:', error.message);
+					return null;
+				}
+			})
+			.filter(card => card !== null);
 
-		cards.forEach(cardData => {
-			const card = createCard(cardData);
-			if (card) {
-				cardGrid.appendChild(card);
-			}
-		});
-
-		section.appendChild(cardGrid);
+		if (cardElements.length > 0) {
+			const cardGrid = createCardGrid(cardElements);
+			section.appendChild(cardGrid);
+		}
 	}
 
 	return section;

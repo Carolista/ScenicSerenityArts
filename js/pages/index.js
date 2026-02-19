@@ -7,6 +7,7 @@ import { setupHead } from '../utils/head.js';
 import { initHeader } from '../components/header.js';
 import { initFooter } from '../components/footer.js';
 import { createCard } from '../components/card.js';
+import { createCardGrid } from '../components/card-grid.js';
 
 export function initHomePage() {
 	// Setup head elements
@@ -29,10 +30,6 @@ export function initHomePage() {
 
 	main.appendChild(heading);
 	main.appendChild(paragraph);
-
-	// Create card grid
-	const cardGrid = document.createElement('div');
-	cardGrid.className = 'card-grid';
 
 	// Define card data
 	const cardData = [
@@ -65,13 +62,9 @@ export function initHomePage() {
 		},
 	];
 
-	// Create cards
-	cardData.forEach(data => {
-		const card = createCard(data);
-		if (card) {
-			cardGrid.appendChild(card);
-		}
-	});
+	// Create cards and card grid
+	const cards = cardData.map(data => createCard(data));
+	const cardGrid = createCardGrid(cards);
 
 	main.appendChild(cardGrid);
 
