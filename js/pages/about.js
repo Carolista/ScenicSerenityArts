@@ -85,7 +85,9 @@ export function initAboutPage() {
 
 // Initialize page when DOM is ready
 if (document.readyState === 'loading') {
-	document.addEventListener('DOMContentLoaded', initAboutPage, { once: true });
+	document.addEventListener('DOMContentLoaded', initAboutPage, {
+		once: true,
+	});
 } else {
 	initAboutPage();
 }

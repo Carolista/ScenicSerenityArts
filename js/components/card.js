@@ -36,7 +36,7 @@ export function createCard(options = {}) {
 
 		if (!hasMedia && !hasTitle && !hasSubtitle) {
 			throw new Error(
-				'Card component requires at least one of: mediaSrc, title, or subtitle',
+				'Card component requires at least one of: mediaSrc, title, or subtitle'
 			);
 		}
 
@@ -55,17 +55,29 @@ export function createCard(options = {}) {
 			if (media._mediaHandlers) {
 				// Desktop: attach hover handlers to card
 				if (media._mediaHandlers.mouseenter) {
-					card.addEventListener('mouseenter', media._mediaHandlers.mouseenter);
-					card.addEventListener('mouseleave', media._mediaHandlers.mouseleave);
+					card.addEventListener(
+						'mouseenter',
+						media._mediaHandlers.mouseenter
+					);
+					card.addEventListener(
+						'mouseleave',
+						media._mediaHandlers.mouseleave
+					);
 				}
 
 				// Mobile: attach touch handlers to card for press-and-hold replay
 				if (media._mediaHandlers.touchstart) {
-					card.addEventListener('touchstart', media._mediaHandlers.touchstart);
-					card.addEventListener('touchend', media._mediaHandlers.touchend);
+					card.addEventListener(
+						'touchstart',
+						media._mediaHandlers.touchstart
+					);
+					card.addEventListener(
+						'touchend',
+						media._mediaHandlers.touchend
+					);
 					card.addEventListener(
 						'touchcancel',
-						media._mediaHandlers.touchcancel,
+						media._mediaHandlers.touchcancel
 					);
 				}
 

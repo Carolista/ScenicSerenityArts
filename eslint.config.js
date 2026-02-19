@@ -1,65 +1,61 @@
 export default [
-    {
-        languageOptions: {
-            ecmaVersion: 'latest',
-            sourceType: 'module',
-            globals: {
-                window: 'readonly',
-                document: 'readonly',
-                console: 'readonly',
-                navigator: 'readonly',
-            },
-        },
-        rules: {
-            // Indentation
-            indent: ['error', 4, { SwitchCase: 1 }],
+	{
+		languageOptions: {
+			ecmaVersion: 'latest',
+			sourceType: 'module',
+			globals: {
+				window: 'readonly',
+				document: 'readonly',
+				console: 'readonly',
+				navigator: 'readonly',
+				IntersectionObserver: 'readonly',
+				setTimeout: 'readonly',
+				clearTimeout: 'readonly',
+			},
+		},
+		rules: {
+			// Indentation - use tabs
+			indent: ['error', 'tab', { SwitchCase: 1 }],
 
-            // Quotes
-            quotes: ['error', 'single', { avoidEscape: true }],
-            'quote-props': ['error', 'as-needed'],
+			// Quotes
+			quotes: ['error', 'single', { avoidEscape: true }],
+			'quote-props': ['error', 'as-needed'],
 
-            // Semicolons
-            semi: ['error', 'always'],
+			// Semicolons
+			semi: ['error', 'always'],
 
-            // Spacing
-            'no-trailing-spaces': 'error',
-            'comma-spacing': ['error', { before: false, after: true }],
-            'key-spacing': ['error', { beforeColon: false, afterColon: true }],
-            'space-before-blocks': 'error',
-            'space-before-function-paren': [
-                'error',
-                {
-                    anonymous: 'always',
-                    named: 'never',
-                    asyncArrow: 'always',
-                },
-            ],
-            'space-infix-ops': 'error',
-            'arrow-spacing': ['error', { before: true, after: true }],
+			// Best Practices
+			eqeqeq: ['error', 'always'],
+			'no-var': 'error',
+			'prefer-const': 'error',
+			'no-unused-vars': ['warn', { argsIgnorePattern: '^_' }],
+			'no-console': 'off',
+			'no-undef': 'error',
 
-            // Best Practices
-            eqeqeq: ['error', 'always'],
-            'no-var': 'error',
-            'prefer-const': 'error',
-            'no-unused-vars': ['warn', { argsIgnorePattern: '^_' }],
-            'no-console': 'off',
-            'no-undef': 'error',
+			// Code Quality
+			'no-duplicate-imports': 'error',
+			'eol-last': ['error', 'always'],
+			'prefer-template': 'error',
+			'object-shorthand': 'error',
 
-            // Code Quality
-            'no-duplicate-imports': 'error',
-            'no-multiple-empty-lines': ['error', { max: 1, maxEOF: 0 }],
-            'eol-last': ['error', 'always'],
-            'prefer-template': 'error',
-            'object-shorthand': 'error',
-        },
-    },
-    {
-        ignores: [
-            'node_modules/**',
-            'dist/**',
-            'build/**',
-            '*.min.js',
-            'coverage/**',
-        ],
-    },
+			// Disable formatting rules handled by Prettier
+			'no-trailing-spaces': 'off',
+			'comma-spacing': 'off',
+			'key-spacing': 'off',
+			'space-before-blocks': 'off',
+			'space-before-function-paren': 'off',
+			'space-infix-ops': 'off',
+			'arrow-spacing': 'off',
+			'no-multiple-empty-lines': 'off',
+		},
+	},
+	{
+		ignores: [
+			'node_modules/**',
+			'dist/**',
+			'build/**',
+			'*.min.js',
+			'coverage/**',
+		],
+	},
 ];

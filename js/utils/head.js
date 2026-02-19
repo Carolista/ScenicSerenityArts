@@ -10,7 +10,8 @@
  * @param {boolean} [options.includeAnalytics=false] - Whether to include Google Analytics
  */
 export function setupHead(options = {}) {
-	const { title = 'Scenic Serenity Arts', includeAnalytics = false } = options;
+	const { title = 'Scenic Serenity Arts', includeAnalytics = false } =
+		options;
 
 	const head = document.head;
 
@@ -21,7 +22,8 @@ export function setupHead(options = {}) {
 	if (includeAnalytics) {
 		const gtagScript = document.createElement('script');
 		gtagScript.async = true;
-		gtagScript.src = 'https://www.googletagmanager.com/gtag/js?id=G-YHZKZ8TB6S';
+		gtagScript.src =
+			'https://www.googletagmanager.com/gtag/js?id=G-YHZKZ8TB6S';
 		head.appendChild(gtagScript);
 
 		const gtagConfig = document.createElement('script');
@@ -43,7 +45,10 @@ export function setupHead(options = {}) {
 
 	const metaViewport = document.createElement('meta');
 	metaViewport.setAttribute('name', 'viewport');
-	metaViewport.setAttribute('content', 'width=device-width, initial-scale=1.0');
+	metaViewport.setAttribute(
+		'content',
+		'width=device-width, initial-scale=1.0'
+	);
 	head.appendChild(metaViewport);
 
 	// Add Google Fonts preconnects

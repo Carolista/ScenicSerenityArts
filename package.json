@@ -1,33 +1,33 @@
 {
-  "name": "scenicserenityarts",
-  "version": "1.0.0",
-  "description": "Landing page for Scenic Serenity Arts, a gateway to the Etsy Shop",
-  "keywords": [
-    "art",
-    "original",
-    "art"
-  ],
-  "homepage": "https://github.com/Carolista/ScenicSerenityArts/index.html",
-  "bugs": {
-    "url": "https://github.com/Carolista/ScenicSerenityArts/issues"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/Carolista/ScenicSerenityArts.git"
-  },
-  "license": "ISC",
-  "author": "Caroline R. Jones",
-  "type": "module",
-  "main": "index.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "lint": "eslint .",
-    "lint:fix": "eslint . --fix",
-    "format": "prettier --write .",
-    "format:check": "prettier --check ."
-  },
-  "dependencies": {
-    "eslint": "^10.0.0",
-    "prettier": "^3.8.1"
-  }
+	"name": "scenicserenityarts",
+	"version": "1.0.0",
+	"description": "Landing page for Scenic Serenity Arts, a gateway to the Etsy Shop",
+	"keywords": [
+		"art",
+		"original",
+		"art"
+	],
+	"homepage": "https://github.com/Carolista/ScenicSerenityArts/index.html",
+	"bugs": {
+		"url": "https://github.com/Carolista/ScenicSerenityArts/issues"
+	},
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/Carolista/ScenicSerenityArts.git"
+	},
+	"license": "ISC",
+	"author": "Caroline R. Jones",
+	"type": "module",
+	"main": "index.js",
+	"scripts": {
+		"test": "echo \"Error: no test specified\" && exit 1",
+		"lint": "eslint .",
+		"lint:fix": "eslint . --fix",
+		"format": "prettier --write .",
+		"format:check": "prettier --check ."
+	},
+	"dependencies": {
+		"eslint": "^10.0.0",
+		"prettier": "^3.8.1"
+	}
 }

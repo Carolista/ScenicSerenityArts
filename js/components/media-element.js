@@ -102,7 +102,7 @@ function createVideoElement(src, alt) {
 					}
 				});
 			},
-			{ threshold: 0.5 }, // 50% visibility
+			{ threshold: 0.5 } // 50% visibility
 		);
 
 		// Track when video ends
@@ -156,7 +156,7 @@ function createVideoElement(src, alt) {
 			touchstart: handleTouchStart,
 			touchend: handleTouchEnd,
 			touchcancel: handleTouchCancel,
-			observer: observer,
+			observer,
 		};
 	} else {
 		// Desktop: Use hover behavior

@@ -40,7 +40,8 @@ export function initMerchandisePage() {
 				title: 'MagSafe Phone Cases',
 				subtitle:
 					'Precision-engineered cases with built-in magnets, blending modern tech with organic art.',
-                linkURL: 'https://www.etsy.com/shop/ScenicSerenityArts?ref=dashboard-header&section_id=52385803',
+				linkURL:
+					'https://www.etsy.com/shop/ScenicSerenityArts?ref=dashboard-header&section_id=52385803',
 			},
 			{
 				mediaSrc: 'assets/videos/phone-case-snap.mp4',
@@ -48,7 +49,8 @@ export function initMerchandisePage() {
 				title: 'Snap Phone Cases',
 				subtitle:
 					'Sleek, slim-profile protection for a minimalist look that highlights original artwork.',
-                linkURL: 'https://www.etsy.com/shop/ScenicSerenityArts?ref=dashboard-header&section_id=52373850',
+				linkURL:
+					'https://www.etsy.com/shop/ScenicSerenityArts?ref=dashboard-header&section_id=52373850',
 			},
 			{
 				mediaSrc: 'assets/videos/phone-case-tough.mp4',
@@ -56,7 +58,8 @@ export function initMerchandisePage() {
 				title: 'Tough Phone Cases',
 				subtitle:
 					'Maximum protection with a dual-layer shell featuring vibrant, wrap-around artistic designs.',
-                linkURL: 'https://www.etsy.com/shop/ScenicSerenityArts?ref=dashboard-header&section_id=52373928',
+				linkURL:
+					'https://www.etsy.com/shop/ScenicSerenityArts?ref=dashboard-header&section_id=52373928',
 			},
 		],
 	});
@@ -73,7 +76,8 @@ export function initMerchandisePage() {
 				title: 'Apple Watch Bands',
 				subtitle:
 					'High-quality vegan leather bands that turn your wearable tech into a piece of watercolor art.',
-                linkURL: 'https://www.etsy.com/shop/ScenicSerenityArts?ref=dashboard-header&section_id=56477203',
+				linkURL:
+					'https://www.etsy.com/shop/ScenicSerenityArts?ref=dashboard-header&section_id=56477203',
 			},
 			{
 				mediaSrc: 'assets/videos/clock.mp4',
@@ -81,7 +85,8 @@ export function initMerchandisePage() {
 				title: 'Clocks',
 				subtitle:
 					'Functional wall decor featuring signature abstract patterns for pop of color or shimmery elegance in your home.',
-                linkURL: 'https://www.etsy.com/shop/ScenicSerenityArts?ref=dashboard-header&section_id=56356386',
+				linkURL:
+					'https://www.etsy.com/shop/ScenicSerenityArts?ref=dashboard-header&section_id=56356386',
 			},
 		],
 	});
