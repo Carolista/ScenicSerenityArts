@@ -41,6 +41,7 @@ export function initMerchandisePage() {
 				title: 'MagSafe Phone Cases',
 				subtitle:
 					'Precision-engineered cases with built-in magnets, blending modern tech with organic art.',
+				buttonText: 'Shop Now',
 				linkURL:
 					'https://www.etsy.com/shop/ScenicSerenityArts?ref=dashboard-header&section_id=52385803',
 			},
@@ -50,6 +51,7 @@ export function initMerchandisePage() {
 				title: 'Snap Phone Cases',
 				subtitle:
 					'Sleek, slim-profile protection for with original artwork that catches the eye.',
+				buttonText: 'Shop Now',
 				linkURL:
 					'https://www.etsy.com/shop/ScenicSerenityArts?ref=dashboard-header&section_id=52373850',
 			},
@@ -59,6 +61,7 @@ export function initMerchandisePage() {
 				title: 'Tough Phone Cases',
 				subtitle:
 					'Maximum protection with a dual-layer shell featuring vibrant, wrap-around artistic designs.',
+				buttonText: 'Shop Now',
 				linkURL:
 					'https://www.etsy.com/shop/ScenicSerenityArts?ref=dashboard-header&section_id=52373928',
 			},
@@ -77,6 +80,7 @@ export function initMerchandisePage() {
 				title: 'Apple Watch Bands',
 				subtitle:
 					'High-quality vegan leather bands that turn your wearable tech into a portable work of art.',
+				buttonText: 'Shop Now',
 				linkURL:
 					'https://www.etsy.com/shop/ScenicSerenityArts?ref=dashboard-header&section_id=56477203',
 			},
@@ -86,6 +90,7 @@ export function initMerchandisePage() {
 				title: 'Clocks',
 				subtitle:
 					'Functional wall decor featuring signature abstract patterns for a pop of color in your home.',
+				buttonText: 'Shop Now',
 				linkURL:
 					'https://www.etsy.com/shop/ScenicSerenityArts?ref=dashboard-header&section_id=56356386',
 			},

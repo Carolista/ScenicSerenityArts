@@ -355,6 +355,25 @@ p {
 	line-height: 1.4;
 }
 
+.card-button {
+	display: inline-block;
+	font-family: var(--font-family-primary);
+	font-size: var(--card-subtitle-size);
+	color: var(--color-off-white);
+	background-color: var(--color-primary-medium);
+	padding: var(--spacing-xs) var(--spacing-sm);
+	border-radius: var(--border-radius);
+	margin-top: var(--spacing-xs);
+	float: right;
+	clear: both;
+	user-select: none;
+	transition: color 0.3s ease;
+}
+
+.card-button:hover {
+	color: var(--color-accent-light);
+}
+
 /* Card link styling */
 a:has(.card) {
 	text-decoration: none;
