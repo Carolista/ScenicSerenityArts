@@ -41,7 +41,7 @@ export function initAboutPage() {
 	// About text paragraphs
 	const paragraphs = [
 		'Art is my late-night happy place.',
-		'By day, I live in the world of bits and bytes, trading in logic, analysis, and system design as a software developer and instructor. By night, I trade syntax for texture and code for color. My work is a bridge between these two worlds: the structured, mathematical patterns of geometry and the unpredictable, organic "blooms" of watercolor.',
+		'By day, I live in the world of bits and bytes, trading in logic, analysis, and system design as a software engineer and web development instructor. By night, I trade syntax for texture and code for color. My work is a bridge between these two worlds: the structured, mathematical patterns of geometry and the unpredictable, organic "blooms" of watercolor.',
 		'Growing up near the ocean gave me a deep appreciation for the fluid rhythms of the coast, a theme that frequently resurfaces in my work even as I now find inspiration in the misty silhouettes of the Great Smoky Mountains in Chattanooga, Tennessee.',
 		'In 2024, I made a major shift to turn my "occasional dabbling" into a daily practice. What began as a personal journey for the soul quickly grew into a prolific collection of paintings, fiber arts, and paper crafts. Scenic Serenity Arts was born out of a desire to share that joy with you.',
 		'In my Home & Lifestyle collection, I have curated a variety of select products that feature my original art. This allows me to bring the Scenic Serenity aesthetic to a wider range of functional goods while maintaining the handmade touch in the items I craft myself.',
@@ -66,7 +66,7 @@ export function initAboutPage() {
 		mediaSrc: 'assets/images/crj-headshot-art.jpg',
 		imageAlt: 'Image of artist Caroline Jones near her art desk.',
 		title: 'Caroline Jones',
-		subtitle: 'Software Engineer • Instructor • Artist',
+		subtitle: 'Software Engineer • Educator • Artist',
 	});
 	sidebar.appendChild(card);
 
