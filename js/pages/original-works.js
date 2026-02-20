@@ -14,7 +14,7 @@ export function initOriginalWorksPage() {
 	const PAGE = getPageById('original-works');
 
 	// Setup head elements
-	setUpHead({ title: PAGE.pageTitle });
+	setUpHead({ title: PAGE.pageTitle, description: PAGE.shortDesc });
 
 	// Initialize header
 	initHeader();
@@ -27,7 +27,7 @@ export function initOriginalWorksPage() {
 	heading.textContent = PAGE.heading;
 
 	const paragraph = document.createElement('p');
-	paragraph.textContent = PAGE.description;
+	paragraph.textContent = PAGE.longDesc;
 
 	main.appendChild(heading);
 	main.appendChild(paragraph);
@@ -47,6 +47,7 @@ export function initOriginalWorksPage() {
 				buttonText: 'Shop Now',
 				linkURL:
 					'https://www.etsy.com/shop/ScenicSerenityArts?ref=dashboard-header&section_id=52360344',
+				preload: 'auto', // First video - preload for faster LCP
 			},
 			{
 				mediaSrc: 'assets/videos/painting-graphic.mp4',

@@ -14,7 +14,7 @@ export function initLifestylePage() {
 	const PAGE = getPageById('lifestyle');
 
 	// Setup head elements
-	setUpHead({ title: PAGE.pageTitle });
+	setUpHead({ title: PAGE.pageTitle, description: PAGE.shortDesc });
 
 	// Initialize header
 	initHeader();
@@ -27,7 +27,7 @@ export function initLifestylePage() {
 	heading.textContent = PAGE.heading;
 
 	const paragraph = document.createElement('p');
-	paragraph.textContent = PAGE.description;
+	paragraph.textContent = PAGE.longDesc;
 
 	main.appendChild(heading);
 	main.appendChild(paragraph);
@@ -47,6 +47,7 @@ export function initLifestylePage() {
 				buttonText: 'Shop Now',
 				linkURL:
 					'https://www.etsy.com/shop/ScenicSerenityArts?ref=dashboard-header&section_id=52385803',
+				preload: 'auto', // First video - preload for faster LCP
 			},
 			{
 				mediaSrc: 'assets/videos/phone-case-snap.mp4',

@@ -15,7 +15,7 @@ export function initHomePage() {
 	const PAGE = getPageById('home');
 
 	// Setup head elements
-	setUpHead({ title: PAGE.pageTitle });
+	setUpHead({ title: PAGE.pageTitle, description: PAGE.shortDesc });
 
 	// Initialize header
 	initHeader();
@@ -29,7 +29,7 @@ export function initHomePage() {
 	heading.id = 'ssa-large';
 
 	const paragraph = document.createElement('p');
-	paragraph.textContent = PAGE.description;
+	paragraph.textContent = PAGE.longDesc;
 
 	main.appendChild(heading);
 	main.appendChild(paragraph);
@@ -45,6 +45,7 @@ export function initHomePage() {
 				'Unique paintings, hand-painted bookmarks, 3D shadow boxes, and one-of-a-kind, wearable fiber arts.',
 			buttonText: 'Learn More',
 			linkURL: '../original-works.html',
+			preload: 'auto', // First video - preload for faster LCP
 		},
 		{
 			mediaSrc: 'assets/videos/art-prints-montage.mp4',

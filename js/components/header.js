@@ -74,6 +74,9 @@ export function createHeader() {
 	const logoImg = document.createElement('img');
 	logoImg.src = 'assets/images/logos/SSA-logo-white.png';
 	logoImg.alt = 'Scenic Serenity Arts';
+	// Set dimensions to prevent CLS - CSS controls actual display size
+	logoImg.width = 300;
+	logoImg.height = 100;
 
 	logoLink.appendChild(logoImg);
 

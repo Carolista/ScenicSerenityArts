@@ -14,7 +14,7 @@ export function initAboutPage() {
 	const PAGE = getPageById('about');
 
 	// Setup head elements
-	setUpHead({ title: PAGE.pageTitle });
+	setUpHead({ title: PAGE.pageTitle, description: PAGE.shortDesc });
 
 	// Add page-specific class to body
 	document.body.classList.add('about-page');

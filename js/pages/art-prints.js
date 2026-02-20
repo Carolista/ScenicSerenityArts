@@ -14,7 +14,7 @@ export function initArtPrintsPage() {
 	const PAGE = getPageById('art-prints');
 
 	// Setup head elements
-	setUpHead({ title: PAGE.pageTitle });
+	setUpHead({ title: PAGE.pageTitle, description: PAGE.shortDesc });
 
 	// Initialize header
 	initHeader();
@@ -27,7 +27,7 @@ export function initArtPrintsPage() {
 	heading.textContent = PAGE.heading;
 
 	const paragraph = document.createElement('p');
-	paragraph.textContent = PAGE.description;
+	paragraph.textContent = PAGE.longDesc;
 
 	main.appendChild(heading);
 	main.appendChild(paragraph);
@@ -46,6 +46,7 @@ export function initArtPrintsPage() {
 					'Artistic notecards for every occasion, featuring original abstract art and natural patterns.',
 				linkURL:
 					'https://www.etsy.com/shop/ScenicSerenityArts?ref=dashboard-header&section_id=52438522',
+				preload: 'auto', // First video - preload for faster LCP
 			},
 			{
 				mediaSrc: 'assets/videos/postcard.mp4',
