@@ -37,6 +37,33 @@ export function setUpHead(options = {}) {
             gtag('config', 'G-YHZKZ8TB6S');
         `;
 		head.appendChild(gtagConfig);
+
+		// Add Meta Pixel
+		const metaPixelScript = document.createElement('script');
+		metaPixelScript.textContent = `
+            !function(f,b,e,v,n,t,s)
+            {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+            n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+            if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+            n.queue=[];t=b.createElement(e);t.async=!0;
+            t.src=v;s=b.getElementsByTagName(e)[0];
+            s.parentNode.insertBefore(t,s)}(window, document,'script',
+            'https://connect.facebook.net/en_US/fbevents.js');
+            fbq('init', '2086562512130229');
+            fbq('track', 'PageView');
+        `;
+		head.appendChild(metaPixelScript);
+
+		// Add Meta Pixel noscript fallback
+		const metaPixelNoscript = document.createElement('noscript');
+		const metaPixelImg = document.createElement('img');
+		metaPixelImg.height = 1;
+		metaPixelImg.width = 1;
+		metaPixelImg.style.display = 'none';
+		metaPixelImg.src =
+			'https://www.facebook.com/tr?id=2086562512130229&ev=PageView&noscript=1';
+		metaPixelNoscript.appendChild(metaPixelImg);
+		head.appendChild(metaPixelNoscript);
 	}
 
 	// Add meta tags
