@@ -8,10 +8,14 @@ import { initHeader } from '../components/header.js';
 import { initFooter } from '../components/footer.js';
 import { createCard } from '../components/card.js';
 import { createCardGrid } from '../components/card-grid.js';
+import { getPageById } from '../constants/pages.js';
 
 export function initHomePage() {
+	// Get page metadata
+	const PAGE = getPageById('home');
+
 	// Setup head elements
-	setUpHead({ title: 'Scenic Serenity Arts' });
+	setUpHead({ title: PAGE.pageTitle, description: PAGE.shortDesc });
 
 	// Initialize header
 	initHeader();
@@ -21,12 +25,11 @@ export function initHomePage() {
 	main.id = 'main-content';
 
 	const heading = document.createElement('h1');
-	heading.textContent = 'Welcome';
+	heading.textContent = PAGE.heading;
 	heading.id = 'ssa-large';
 
 	const paragraph = document.createElement('p');
-	paragraph.textContent =
-		'Scenic Serenity Arts — Where art illuminates the analytical,  and geology intersects with geometry. Explore a collection of intuitive art, fiber goods, and functional decor inspired by the organic rhythms of the Great Smoky Mountains and the Florida coast.';
+	paragraph.textContent = PAGE.longDesc;
 
 	main.appendChild(heading);
 	main.appendChild(paragraph);
@@ -42,6 +45,7 @@ export function initHomePage() {
 				'Unique paintings, hand-painted bookmarks, 3D shadow boxes, and one-of-a-kind, wearable fiber arts.',
 			buttonText: 'Learn More',
 			linkURL: '../original-works.html',
+			preload: 'auto', // First video - preload for faster LCP
 		},
 		{
 			mediaSrc: 'assets/videos/art-prints-montage.mp4',
@@ -54,14 +58,14 @@ export function initHomePage() {
 			linkURL: '../art-prints.html',
 		},
 		{
-			mediaSrc: 'assets/videos/merchandise-montage.mp4',
+			mediaSrc: 'assets/videos/lifestyle-montage.mp4',
 			imageAlt:
 				'Montage of a cell phone case, wall clock, and Apple watch band',
-			title: 'Merchandise',
+			title: 'Lifestyle',
 			subtitle:
 				'Functional art for your daily adventures. Elevate your tech and home with vibrant abstract patterns.',
 			buttonText: 'Learn More',
-			linkURL: '../merchandise.html',
+			linkURL: '../lifestyle.html',
 		},
 	];
 

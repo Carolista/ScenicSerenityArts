@@ -7,10 +7,14 @@ import { setUpHead } from '../utils/head.js';
 import { initHeader } from '../components/header.js';
 import { initFooter } from '../components/footer.js';
 import { createCard } from '../components/card.js';
+import { getPageById } from '../constants/pages.js';
 
 export function initAboutPage() {
+	// Get page metadata
+	const PAGE = getPageById('about');
+
 	// Setup head elements
-	setUpHead({ title: 'About - Scenic Serenity Arts' });
+	setUpHead({ title: PAGE.pageTitle, description: PAGE.shortDesc });
 
 	// Add page-specific class to body
 	document.body.classList.add('about-page');
@@ -23,7 +27,7 @@ export function initAboutPage() {
 	main.id = 'main-content';
 
 	const heading = document.createElement('h1');
-	heading.textContent = 'About the Artist';
+	heading.textContent = PAGE.heading;
 	main.appendChild(heading);
 
 	// Create grid content wrapper
@@ -40,6 +44,7 @@ export function initAboutPage() {
 		'By day, I live in the world of bits and bytes, trading in logic, analysis, and system design as a software developer and instructor. By night, I trade syntax for texture and code for color. My work is a bridge between these two worlds: the structured, mathematical patterns of geometry and the unpredictable, organic "blooms" of watercolor.',
 		'Growing up near the ocean gave me a deep appreciation for the fluid rhythms of the coast, a theme that frequently resurfaces in my work even as I now find inspiration in the misty silhouettes of the Great Smoky Mountains in Chattanooga, Tennessee.',
 		'In 2024, I made a major shift to turn my "occasional dabbling" into a daily practice. What began as a personal journey for the soul quickly grew into a prolific collection of paintings, fiber arts, and paper crafts. Scenic Serenity Arts was born out of a desire to share that joy with you.',
+		'In my Home & Lifestyle collection, I have curated a variety of select products that feature my original art. This allows me to bring the Scenic Serenity aesthetic to a wider range of functional goods while maintaining the handmade touch in the items I craft myself.',
 		'Every piece I create—from a hand-painted bookmark to a freeform knit scarf—is a celebration of the balance found when we plant our feet in both the analytical and the artistic.',
 	];
 

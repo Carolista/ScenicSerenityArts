@@ -7,10 +7,15 @@
  * Setup common head elements
  * @param {Object} options - Configuration options
  * @param {string} options.title - Page title
+ * @param {string} [options.description] - Meta description for SEO
  * @param {boolean} [options.includeAnalytics=true] - Whether to include Google Analytics
  */
 export function setUpHead(options = {}) {
-	const { title = 'Scenic Serenity Arts', includeAnalytics = true } = options;
+	const {
+		title = 'Scenic Serenity Arts',
+		description = '',
+		includeAnalytics = true,
+	} = options;
 
 	const head = document.head;
 
@@ -47,6 +52,74 @@ export function setUpHead(options = {}) {
 	);
 	head.appendChild(metaViewport);
 
+	// Add meta description for SEO if provided
+	if (description) {
+		const metaDescription = document.createElement('meta');
+		metaDescription.setAttribute('name', 'description');
+		metaDescription.setAttribute('content', description);
+		head.appendChild(metaDescription);
+	}
+
+	// Add canonical URL
+	const canonical = document.createElement('link');
+	canonical.rel = 'canonical';
+	canonical.href = window.location.href;
+	head.appendChild(canonical);
+
+	// Add Open Graph tags for social media sharing
+	if (title) {
+		const ogTitle = document.createElement('meta');
+		ogTitle.setAttribute('property', 'og:title');
+		ogTitle.setAttribute('content', title);
+		head.appendChild(ogTitle);
+	}
+
+	if (description) {
+		const ogDescription = document.createElement('meta');
+		ogDescription.setAttribute('property', 'og:description');
+		ogDescription.setAttribute('content', description);
+		head.appendChild(ogDescription);
+	}
+
+	const ogImage = document.createElement('meta');
+	ogImage.setAttribute('property', 'og:image');
+	ogImage.setAttribute(
+		'content',
+		`${window.location.origin}/assets/images/og-image.png`
+	);
+	head.appendChild(ogImage);
+
+	const ogUrl = document.createElement('meta');
+	ogUrl.setAttribute('property', 'og:url');
+	ogUrl.setAttribute('content', window.location.href);
+	head.appendChild(ogUrl);
+
+	const ogType = document.createElement('meta');
+	ogType.setAttribute('property', 'og:type');
+	ogType.setAttribute('content', 'website');
+	head.appendChild(ogType);
+
+	// Add structured data (JSON-LD) for SEO
+	const structuredData = {
+		'@context': 'https://schema.org',
+		'@type': 'Artist',
+		name: 'Caroline Jones',
+		url: window.location.origin,
+		sameAs: [
+			'https://www.etsy.com/shop/ScenicSerenityArts',
+			'https://www.facebook.com/ScenicSerenityArts/',
+			'https://www.instagram.com/scenicserenityarts/',
+		],
+		image: `${window.location.origin}/assets/images/crj-headshot-art.jpg`,
+		description:
+			'Software developer and artist creating original watercolor paintings, fiber arts, and functional decor.',
+	};
+
+	const structuredDataScript = document.createElement('script');
+	structuredDataScript.type = 'application/ld+json';
+	structuredDataScript.textContent = JSON.stringify(structuredData);
+	head.appendChild(structuredDataScript);
+
 	// Add Google Fonts preconnects
 	const preconnect1 = document.createElement('link');
 	preconnect1.rel = 'preconnect';
@@ -78,6 +151,19 @@ export function setUpHead(options = {}) {
 	fontAwesomeKit.src = 'https://kit.fontawesome.com/679a59d672.js';
 	fontAwesomeKit.crossOrigin = 'anonymous';
 	head.appendChild(fontAwesomeKit);
+
+	// Preload critical CSS for performance
+	const preloadVariablesCSS = document.createElement('link');
+	preloadVariablesCSS.rel = 'preload';
+	preloadVariablesCSS.as = 'style';
+	preloadVariablesCSS.href = 'css/variables.css';
+	head.appendChild(preloadVariablesCSS);
+
+	const preloadGlobalCSS = document.createElement('link');
+	preloadGlobalCSS.rel = 'preload';
+	preloadGlobalCSS.as = 'style';
+	preloadGlobalCSS.href = 'css/global.css';
+	head.appendChild(preloadGlobalCSS);
 
 	// Add CSS stylesheets
 	const variablesCSS = document.createElement('link');

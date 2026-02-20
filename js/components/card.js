@@ -16,6 +16,7 @@ import { createMediaElement, getMediaHandlers } from './media-element.js';
  * @param {string} [options.buttonText] - Text for decorative button
  * @param {string} [options.className] - Additional CSS class for the card
  * @param {string} [options.linkURL] - URL to link the card to
+ * @param {string} [options.preload] - Video preload strategy: 'auto', 'metadata', or 'none'
  * @returns {HTMLElement|HTMLAnchorElement} The card element (wrapped in link if linkURL provided)
  */
 export function createCard(options = {}) {
@@ -27,6 +28,7 @@ export function createCard(options = {}) {
 		buttonText = '',
 		className = '',
 		linkURL = '',
+		preload = 'metadata',
 	} = options;
 
 	// Check if all values are empty or blank
@@ -51,6 +53,7 @@ export function createCard(options = {}) {
 		const media = createMediaElement({
 			mediaSrc,
 			alt: imageAlt,
+			preload,
 		});
 
 		// If media has event handlers (video), attach them appropriately

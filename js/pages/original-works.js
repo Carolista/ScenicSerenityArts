@@ -7,10 +7,14 @@ import { setUpHead } from '../utils/head.js';
 import { initHeader } from '../components/header.js';
 import { initFooter } from '../components/footer.js';
 import { createSection } from '../components/section.js';
+import { getPageById } from '../constants/pages.js';
 
 export function initOriginalWorksPage() {
+	// Get page metadata
+	const PAGE = getPageById('original-works');
+
 	// Setup head elements
-	setUpHead({ title: 'Original Works - Scenic Serenity Arts' });
+	setUpHead({ title: PAGE.pageTitle, description: PAGE.shortDesc });
 
 	// Initialize header
 	initHeader();
@@ -20,11 +24,10 @@ export function initOriginalWorksPage() {
 	main.id = 'main-content';
 
 	const heading = document.createElement('h1');
-	heading.textContent = 'Original Works';
+	heading.textContent = PAGE.heading;
 
 	const paragraph = document.createElement('p');
-	paragraph.textContent =
-		'One-of-a-kind creations born from the intersection of logic and flow. From watercolor fractals to hand-knitted geometry, these pieces are crafted to be as unique as the nature that inspired them.';
+	paragraph.textContent = PAGE.longDesc;
 
 	main.appendChild(heading);
 	main.appendChild(paragraph);
@@ -44,6 +47,7 @@ export function initOriginalWorksPage() {
 				buttonText: 'Shop Now',
 				linkURL:
 					'https://www.etsy.com/shop/ScenicSerenityArts?ref=dashboard-header&section_id=52360344',
+				preload: 'auto', // First video - preload for faster LCP
 			},
 			{
 				mediaSrc: 'assets/videos/painting-graphic.mp4',

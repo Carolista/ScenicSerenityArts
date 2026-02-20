@@ -30,10 +30,11 @@ export function getMediaHandlers(element) {
  * @param {Object} options - Media configuration options
  * @param {string} options.mediaSrc - URL of the media file
  * @param {string} [options.alt] - Alt text for accessibility
+ * @param {string} [options.preload] - Video preload strategy: 'auto', 'metadata' (default), or 'none'
  * @returns {HTMLImageElement|HTMLVideoElement} The image or video element
  */
 export function createMediaElement(options = {}) {
-	const { mediaSrc, alt = '' } = options;
+	const { mediaSrc, alt = '', preload = 'metadata' } = options;
 
 	if (!mediaSrc || mediaSrc.trim() === '') {
 		throw new Error('Media element requires a mediaSrc');
@@ -45,7 +46,7 @@ export function createMediaElement(options = {}) {
 	const imageExtensions = ['jpg', 'jpeg', 'png', 'gif', 'svg', 'webp'];
 
 	if (videoExtensions.includes(extension)) {
-		return createVideoElement(mediaSrc, alt);
+		return createVideoElement(mediaSrc, alt, preload);
 	} else if (imageExtensions.includes(extension)) {
 		return createImageElement(mediaSrc, alt);
 	} else {
@@ -74,15 +75,17 @@ function createImageElement(src, alt) {
  * Mobile/Touch: auto-play on scroll into view (50% threshold), press-and-hold to replay
  * @param {string} src - Video source URL
  * @param {string} alt - Accessibility label
+ * @param {string} preload - Preload strategy: 'auto', 'metadata', or 'none'
  * @returns {HTMLVideoElement}
  */
-function createVideoElement(src, alt) {
+function createVideoElement(src, alt, preload = 'metadata') {
 	const video = document.createElement('video');
 	video.className = 'card-image';
 	video.src = src;
 	video.muted = true;
 	video.playsInline = true;
-	video.preload = 'auto';
+	// Preload strategy: 'auto' for first video (LCP), 'metadata' for rest
+	video.preload = preload;
 
 	if (alt) {
 		video.setAttribute('aria-label', alt);

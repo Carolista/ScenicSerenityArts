@@ -7,10 +7,14 @@ import { setUpHead } from '../utils/head.js';
 import { initHeader } from '../components/header.js';
 import { initFooter } from '../components/footer.js';
 import { createSection } from '../components/section.js';
+import { getPageById } from '../constants/pages.js';
 
 export function initArtPrintsPage() {
+	// Get page metadata
+	const PAGE = getPageById('art-prints');
+
 	// Setup head elements
-	setUpHead({ title: 'Art Prints - Scenic Serenity Arts' });
+	setUpHead({ title: PAGE.pageTitle, description: PAGE.shortDesc });
 
 	// Initialize header
 	initHeader();
@@ -20,11 +24,10 @@ export function initArtPrintsPage() {
 	main.id = 'main-content';
 
 	const heading = document.createElement('h1');
-	heading.textContent = 'Art Prints & Stationery';
+	heading.textContent = PAGE.heading;
 
 	const paragraph = document.createElement('p');
-	paragraph.textContent =
-		'Bring colorful abstract compositions and nature-inspired landscapes into your space with high-quality reproductions and paper goods designed for collectors and correspondents alike.';
+	paragraph.textContent = PAGE.longDesc;
 
 	main.appendChild(heading);
 	main.appendChild(paragraph);
@@ -41,9 +44,9 @@ export function initArtPrintsPage() {
 				title: 'Notecards',
 				subtitle:
 					'Artistic notecards for every occasion, featuring original abstract art and natural patterns.',
-				buttonText: 'Shop Now',
 				linkURL:
 					'https://www.etsy.com/shop/ScenicSerenityArts?ref=dashboard-header&section_id=52438522',
+				preload: 'auto', // First video - preload for faster LCP
 			},
 			{
 				mediaSrc: 'assets/videos/postcard.mp4',
@@ -51,7 +54,6 @@ export function initArtPrintsPage() {
 				title: 'Postcards',
 				subtitle:
 					'Small-scale prints based on original art. (Note: Currently exclusive to UK shipping.)',
-				buttonText: 'Shop Now',
 				linkURL:
 					'https://www.etsy.com/shop/ScenicSerenityArts?ref=dashboard-header&section_id=52399089',
 			},
@@ -60,7 +62,6 @@ export function initArtPrintsPage() {
 			// 	imageAlt: 'Art Prints',
 			// 	title: 'Art Prints',
 			// 	subtitle: '(Subtitle)',
-			//  buttonText: 'Shop Now',
 			//  linkURL: '',
 			// },
 			{
@@ -69,7 +70,6 @@ export function initArtPrintsPage() {
 				title: 'Posters',
 				subtitle:
 					'High-quality reproductions of my most popular abstract watercolor paintings.',
-				buttonText: 'Shop Now',
 				linkURL:
 					'https://www.etsy.com/shop/ScenicSerenityArts?ref=dashboard-header&section_id=52461235',
 			},
@@ -88,7 +88,6 @@ export function initArtPrintsPage() {
 				title: 'Notebooks',
 				subtitle:
 					'Spiral notebooks featuring original art—perfect for your daily logs and ruminations.',
-				buttonText: 'Shop Now',
 				linkURL:
 					'https://www.etsy.com/shop/ScenicSerenityArts?ref=dashboard-header&section_id=52384830',
 			},
@@ -97,7 +96,6 @@ export function initArtPrintsPage() {
 			// 	imageAlt: 'Journals',
 			// 	title: 'Journals',
 			// 	subtitle: 'Premium bound journals designed to protect your thoughts with a cover of serene, abstract art.',
-			//  buttonText: 'Shop Now',
 			//     linkURL: '',
 			// },
 		],
